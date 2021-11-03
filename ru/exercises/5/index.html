@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../../../settings/css/normalize.css">
+    <link rel="stylesheet" href="../../../settings/css/main.css">
+    <link rel="stylesheet" href="../../../settings/css/exercises.css">
+
+</head>
+
+<body class="mainColor1-bg">
+
+    <header class="header mainColor1 mainColor2-bg">
+        <div class="container">
+            <div class="header__menu mainIndent">
+                <ul class="header__menu-ul">
+                    <div class="">
+                        <a href="#" class="header__menu-a-li">
+                            <button class="header__menu-li mainColor1 mainColor2-bg transition">Главная</button>
+                        </a>
+                    </div>
+                    <div class="">
+                        <button class="header__menu-li mainColor1 mainColor2-bg transition">Язык</button>
+                        <ul class="header__menu-ul--press mainColor3-bg">
+                            <a class="mainColor4" href="#">
+                                <li class="header__menu-li--press transition">En</li>
+                            </a>
+                            <a class="mainColor4" href="#">
+                                <li class="header__menu-li--press transition">Ru</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <a href="#" class="header__menu-a-li">
+                            <button class="header__menu-li mainColor1 mainColor2-bg transition">О проекте</button>
+                        </a>
+                    </div>
+                    <div class="">
+                        <button class="header__menu-li mainColor1 mainColor2-bg transition">Упражнения</button>
+                        <ul class="header__menu-ul--press mainColor3-bg ">
+                            <a class="mainColor4" href="#">
+                                <li class="header__menu-li--press transition">Для начинающих</li>
+                            </a>
+                            <a class="mainColor4" href="#">
+                                <li class="header__menu-li--press transition">Фразы</li>
+                            </a>
+                            <a class="mainColor4" href="#">
+                                <li class="header__menu-li--press transition">Цифры</li>
+                            </a>
+                            <a class="mainColor4" href="#">
+                                <li class="header__menu-li--press transition">Символы</li>
+                            </a>
+                            <a class="mainColor4" href="#">
+                                <li class="header__menu-li--press transition">Мой текст</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <a href="#" class="header__menu-a-li">
+                            <button class="header__menu-li mainColor1 mainColor2-bg transition">Настройки</button>
+                        </a>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="screen mainColor2">
+        <div class="container">
+
+            <div id="hideWindowChoseNeweText" class="hideWindow hideWindowChoseNeweText mainColor3-bg shadow">
+                <div class="hideWindowTitle">Вставьте свой текст</div>
+                <textarea class="hideWindowTexarea" name="text" id="textareaChoseNeweText" cols="30"
+                    rows="10"></textarea>
+                    <div class="choseNeweTextDescription">
+                        ! Внимание, все символы латинской раскладки будут заменены звездочкой: <span>*</span>
+                    </div>
+                <div class="hideWindowChoseNeweText__buttons">
+                    <button id="choseNeweTextOk"
+                        class="hideWindowButtons mainColor3-bg buttonsHower mainColor4">Ок</button>
+                </div>
+            </div>
+
+            <div id="hideWindowPause" class="hideWindow hideWindowPause mainColor3-bg shadow">
+                <div class="hideWindowTitle">Пауза</div>
+                <div class="hideWindowPause__buttons">
+                    <button id="hideWindowPauseContinue"
+                        class="hideWindowButtons mainColor3-bg buttonsHower mainColor4">Продолжить</button>
+                    <button id="hideWindowPauseEnd"
+                        class="hideWindowButtons mainColor3-bg buttonsHower mainColor4">Завершить</button>
+                </div>
+            </div>
+            <div id="hideWindowSetTimer" class="hideWindow hideWindowSetTimer mainColor3-bg shadow">
+                <div class="hideWindowTitle">Установка таймера</div>
+                <div class="hideWindowSetTimer__buttons">
+                    <button id="hideWindSetTimCancel"
+                        class="hideWindowButtons mainColor3-bg buttonsHower mainColor4">Отмена</button>
+                    <div class="hideWindow__timerDisplay">
+                        <div class="hideWindow__swg">
+                            <div class="hideWindowSwg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="100 20 312 232">
+                                    <title></title>
+                                    <g id="icomoon-ignore">
+                                    </g>
+                                    <path
+                                        d="M368.007 224c-4.454 0-8.885-1.849-12.048-5.464l-99.959-114.239-99.959 114.239c-5.818 6.65-15.928 7.325-22.577 1.505-6.65-5.819-7.324-15.927-1.505-22.577l112-128c3.038-3.472 7.427-5.464 12.041-5.464s9.003 1.992 12.041 5.464l112 128c5.819 6.65 5.146 16.758-1.505 22.577-3.035 2.656-6.791 3.959-10.529 3.959z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="hideWindowSwg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="100 20 312 232">
+                                    <title></title>
+                                    <g id="icomoon-ignore">
+                                    </g>
+                                    <path
+                                        d="M368.007 224c-4.454 0-8.885-1.849-12.048-5.464l-99.959-114.239-99.959 114.239c-5.818 6.65-15.928 7.325-22.577 1.505-6.65-5.819-7.324-15.927-1.505-22.577l112-128c3.038-3.472 7.427-5.464 12.041-5.464s9.003 1.992 12.041 5.464l112 128c5.819 6.65 5.146 16.758-1.505 22.577-3.035 2.656-6.791 3.959-10.529 3.959z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="hideWindowSwg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="100 20 312 232">
+                                    <title></title>
+                                    <g id="icomoon-ignore">
+                                    </g>
+                                    <path
+                                        d="M368.007 224c-4.454 0-8.885-1.849-12.048-5.464l-99.959-114.239-99.959 114.239c-5.818 6.65-15.928 7.325-22.577 1.505-6.65-5.819-7.324-15.927-1.505-22.577l112-128c3.038-3.472 7.427-5.464 12.041-5.464s9.003 1.992 12.041 5.464l112 128c5.819 6.65 5.146 16.758-1.505 22.577-3.035 2.656-6.791 3.959-10.529 3.959z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="hideWindowTimeScreen" class="hideWindow__text">00:00:00</div>
+                        <div class="hideWindow__swg hideWindow__swg-bottom">
+                            <div class="hideWindowSwg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="100 20 312 232">
+                                    <title></title>
+                                    <g id="icomoon-ignore">
+                                    </g>
+                                    <path
+                                        d="M368.007 224c-4.454 0-8.885-1.849-12.048-5.464l-99.959-114.239-99.959 114.239c-5.818 6.65-15.928 7.325-22.577 1.505-6.65-5.819-7.324-15.927-1.505-22.577l112-128c3.038-3.472 7.427-5.464 12.041-5.464s9.003 1.992 12.041 5.464l112 128c5.819 6.65 5.146 16.758-1.505 22.577-3.035 2.656-6.791 3.959-10.529 3.959z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="hideWindowSwg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="100 20 312 232">
+                                    <title></title>
+                                    <g id="icomoon-ignore">
+                                    </g>
+                                    <path
+                                        d="M368.007 224c-4.454 0-8.885-1.849-12.048-5.464l-99.959-114.239-99.959 114.239c-5.818 6.65-15.928 7.325-22.577 1.505-6.65-5.819-7.324-15.927-1.505-22.577l112-128c3.038-3.472 7.427-5.464 12.041-5.464s9.003 1.992 12.041 5.464l112 128c5.819 6.65 5.146 16.758-1.505 22.577-3.035 2.656-6.791 3.959-10.529 3.959z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="hideWindowSwg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="100 20 312 232">
+                                    <title></title>
+                                    <g id="icomoon-ignore">
+                                    </g>
+                                    <path
+                                        d="M368.007 224c-4.454 0-8.885-1.849-12.048-5.464l-99.959-114.239-99.959 114.239c-5.818 6.65-15.928 7.325-22.577 1.505-6.65-5.819-7.324-15.927-1.505-22.577l112-128c3.038-3.472 7.427-5.464 12.041-5.464s9.003 1.992 12.041 5.464l112 128c5.819 6.65 5.146 16.758-1.505 22.577-3.035 2.656-6.791 3.959-10.529 3.959z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="hideWindSetTimOk"
+                        class="hideWindowButtons mainColor3-bg buttonsHower mainColor4">Ок</button>
+                </div>
+            </div>
+            <div class="screen__settings">
+                <div class="screen__menu">
+                    <div id="buttonPause" class="screen__menu-items paddingElements buttonsHower">
+                        Esc - пауза
+                    </div>
+                    <div id="buttonStart" class="screen__menu-items paddingElements buttonsHower">
+                        Пробел/Enter - начать
+                    </div>
+                    <div id="buttonSetTimer" class="screen__menu-items paddingElements buttonsHower">
+                        Установить таймер
+                    </div>
+                    <div id="buttonChoseNeweText" class="screen__menu-items paddingElements buttonsHower">
+                        Выбрать новый текст
+                    </div>
+                </div>
+                <div id='timerScreen' class="screen__timer paddingElements">00:00:00</div>
+            </div>
+            <div class="screen__display mainColor3-bg shadow">
+                <p id="screenText" class="screen__text">
+                    E<span class="screen__selectLetter secondColor2" id="selectLetter">x</span><span
+                        class="screen__selectLetter secondColor1" id="selectLetter">a</span>mple E<span
+                        class="screen__selectLetter secondColor3" id="selectLetter">x</span>ample
+                </p>
+            </div>
+            <div class="screen__fontSize paddingElements">Размер шрифта: <span id="fontSizePlus"
+                    class="screen__fontSize-button buttonsHower">+</span> <span id="fontSizeInner">18</span> <span
+                    id="fontSizeMinus" class="screen__fontSize-button buttonsHower">-</span></div>
+        </div>
+    </section>
+
+    <section class="sectionKeyboard">
+        <div class="container">
+            <div class="main__keyboard">
+
+                <svg id="keyboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 670.5 282">
+                    <defs>
+                        <style>
+
+                        </style>
+                        <image id="image" width="65" height="65"
+                            xlink:href="data:image/png;base64,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" />
+                        <image id="image-2" width="65" height="65"
+                            xlink:href="data:image/png;base64,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" />
+                    </defs>
+                    <title></title>
+                    <g id="keyboardBackground">
+                        <rect class="cls-1" width="670.5" height="282" rx="15" />
+                    </g>
+                    <g id="keyboardKeys">
+                        <g id="arrRight">
+                            <rect class="cls-2" x="618" y="248.25" width="39.75" height="21" rx="5.25" />
+                        </g>
+                        <g id="arrDown">
+                            <rect class="cls-2" x="569.25" y="248.25" width="39.75" height="21" rx="5.25" />
+                        </g>
+                        <g id="arrUp">
+                            <rect class="cls-2" x="569.25" y="225" width="39.75" height="21" rx="5.25" />
+                        </g>
+                        <g id="arrLeft">
+                            <rect class="cls-2" x="521.25" y="248.25" width="39.75" height="21" rx="5.25" />
+                        </g>
+                        <g id="Right_Ctrl" data-name="Right Ctrl">
+                            <rect class="cls-2" x="476.25" y="225" width="38.25" height="44.25" rx="5.25" />
+                        </g>
+                        <g id="Right_Alt" data-name="Right Alt">
+                            <rect class="cls-2" x="421.5" y="225" width="48.75" height="44.25" rx="5.25" />
+                        </g>
+                        <g id="Space">
+                            <rect class="cls-2" x="203.25" y="225" width="212.25" height="44.25" rx="5.25" />
+                        </g>
+                        <g id="Left_Alt" data-name="Left Alt">
+                            <rect class="cls-2" x="148.5" y="225" width="48.75" height="44.25" rx="5.25" />
+                        </g>
+                        <g id="Windows">
+                            <rect class="cls-2" x="103.5" y="225" width="38.25" height="44.25" rx="5.25" />
+                        </g>
+                        <g id="Fn">
+                            <rect class="cls-2" x="60" y="225" width="38.25" height="44.25" rx="5.25" />
+                        </g>
+                        <g id="Left_Ctrl" data-name="Left Ctrl">
+                            <rect class="cls-2" x="14.25" y="225" width="38.25" height="44.25" rx="5.25" />
+                        </g>
+                        <g id="Right_Shift" data-name="Right Shift">
+                            <rect class="cls-2" x="561" y="181.5" width="95.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_" data-name="? /">
+                            <rect class="cls-2" x="515.25" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_." data-name="&gt; .">
+                            <rect class="cls-2" x="471.75" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_2" data-name="&lt; ,">
+                            <rect class="cls-2" x="426.75" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="M">
+                            <rect class="cls-2" x="382.5" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="N">
+                            <rect class="cls-2" x="337.5" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="B">
+                            <rect class="cls-2" x="292.5" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="V">
+                            <rect class="cls-2" x="249" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="C">
+                            <rect class="cls-2" x="204.75" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="X">
+                            <rect class="cls-2" x="159.75" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Z">
+                            <rect class="cls-2" x="115.5" y="181.5" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Left_Shift" data-name="Left Shift">
+                            <rect class="cls-2" x="14.25" y="181.5" width="95.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Enter">
+                            <rect class="cls-2" x="583.5" y="138.75" width="73.5" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_3" data-name="&quot; &apos;">
+                            <rect class="cls-2" x="538.5" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id=":_" data-name=": ;">
+                            <rect class="cls-2" x="493.5" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="L">
+                            <rect class="cls-2" x="450" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="K">
+                            <rect class="cls-2" x="405" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="J">
+                            <rect class="cls-2" x="360.75" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="H">
+                            <rect class="cls-2" x="315.75" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="G">
+                            <rect class="cls-2" x="270.75" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="F">
+                            <rect class="cls-2" x="227.25" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="D">
+                            <rect class="cls-2" x="183" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="S">
+                            <rect class="cls-2" x="138" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="A">
+                            <rect class="cls-2" x="93.75" y="138.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Caps_Lock" data-name="Caps Lock">
+                            <rect class="cls-2" x="14.25" y="138.75" width="72.75" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_4" data-name="| \">
+                            <rect class="cls-2" x="618" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_5" data-name="} ]">
+                            <rect class="cls-2" x="572.25" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_6" data-name="{ [">
+                            <rect class="cls-2" x="527.25" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="P">
+                            <rect class="cls-2" x="482.25" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="O">
+                            <rect class="cls-2" x="438.75" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="I">
+                            <rect class="cls-2" x="393.75" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="U">
+                            <rect class="cls-2" x="349.5" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Y">
+                            <rect class="cls-2" x="304.5" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="T">
+                            <rect class="cls-2" x="259.5" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="R">
+                            <rect class="cls-2" x="216" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="E">
+                            <rect class="cls-2" x="171.75" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="W">
+                            <rect class="cls-2" x="126.75" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Q">
+                            <rect class="cls-2" x="82.5" y="95.25" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Tab">
+                            <rect class="cls-2" x="15" y="95.25" width="62.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Backspace">
+                            <rect class="cls-2" x="594.75" y="51.75" width="63" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_7" data-name="+ =">
+                            <rect class="cls-2" x="550.5" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="__-" data-name="_ -">
+                            <rect class="cls-2" x="505.5" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_0" data-name=") 0">
+                            <rect class="cls-2" x="461.25" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_9" data-name="( 9">
+                            <rect class="cls-2" x="416.25" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_8" data-name="* 8">
+                            <rect class="cls-2" x="372" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_7-2" data-name="&amp; 7">
+                            <rect class="cls-2" x="327" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_6-2" data-name="^ 6">
+                            <rect class="cls-2" x="282.75" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_5-2" data-name="% 5">
+                            <rect class="cls-2" x="237.75" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_4-2" data-name="$ 4">
+                            <rect class="cls-2" x="194.25" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_3-2" data-name="# 3">
+                            <rect class="cls-2" x="150.75" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_2-2" data-name="@ 2">
+                            <rect class="cls-2" x="105" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_1" data-name="! 1">
+                            <rect class="cls-2" x="60.75" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="_8-2" data-name="~ `">
+                            <rect class="cls-2" x="14.25" y="51.75" width="38.25" height="38.25" rx="5.25" />
+                        </g>
+                        <g id="Delete">
+                            <rect class="cls-2" x="618" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F12">
+                            <rect class="cls-2" x="570" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F11">
+                            <rect class="cls-2" x="523.5" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F10">
+                            <rect class="cls-2" x="477" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F9">
+                            <rect class="cls-2" x="430.5" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F8">
+                            <rect class="cls-2" x="384" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F7">
+                            <rect class="cls-2" x="339" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F6">
+                            <rect class="cls-2" x="292.5" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F5">
+                            <rect class="cls-2" x="246" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F4">
+                            <rect class="cls-2" x="201" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F3">
+                            <rect class="cls-2" x="154.5" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F2">
+                            <rect class="cls-2" x="108" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="F1">
+                            <rect class="cls-2" x="61.5" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                        <g id="Esc">
+                            <rect class="cls-2" x="14.25" y="23.25" width="40.5" height="21" rx="4.5" />
+                        </g>
+                    </g>
+                    <g id="keyboardLatin">
+                        <g id="Esc-2" data-name="Esc"><text class="cls-3" transform="translate(22.15 38.3)">Esc</text>
+                        </g>
+                        <g id="F1-2" data-name="F1"><text class="cls-4" transform="translate(85.12 39.11)">F1</text></g>
+                        <g id="F2-2" data-name="F2"><text class="cls-4" transform="translate(130.42 39.11)">F2</text>
+                        </g>
+                        <g id="F3-2" data-name="F3"><text class="cls-4" transform="translate(177.02 39.11)">F3</text>
+                        </g>
+                        <g id="F4-2" data-name="F4"><text class="cls-4" transform="translate(222.41 39.11)">F4</text>
+                        </g>
+                        <g id="F5-2" data-name="F5"><text class="cls-4" transform="translate(268.93 39.11)">F5</text>
+                        </g>
+                        <g id="F6-2" data-name="F6"><text class="cls-4" transform="translate(314.6 39.11)">F6</text></g>
+                        <g id="F7-2" data-name="F7"><text class="cls-4" transform="translate(361.02 39.11)">F7</text>
+                        </g>
+                        <g id="F8-2" data-name="F8"><text class="cls-4" transform="translate(407.53 39.11)">F8</text>
+                        </g>
+                        <g id="F9-2" data-name="F9"><text class="cls-4" transform="translate(452.92 39.11)">F9</text>
+                        </g>
+                        <g id="F10-2" data-name="F10"><text class="cls-4" transform="translate(497.57 39.11)">F10</text>
+                        </g>
+                        <g id="F11-2" data-name="F11"><text class="cls-4" transform="translate(545.11 39.11)">F11</text>
+                        </g>
+                        <g id="F12-2" data-name="F12"><text class="cls-4" transform="translate(589.38 39.11)">F12</text>
+                        </g>
+                        <g id="Delete-2" data-name="Delete"><text class="cls-4"
+                                transform="translate(625.81 37.43)">Delete</text></g>
+                        <g id="_1-2" data-name="!
+1"><text class="cls-3" transform="translate(66.39 67.82)">!<tspan x="0" y="13.2">1</tspan></text></g>
+                        <g id="_2-3" data-name="@
+2"><text class="cls-3" transform="translate(110.91 67.54)">@<tspan x="0" y="13.2">2</tspan></text></g>
+                        <g id="_3-3" data-name="#
+3"><text class="cls-3" transform="translate(156.78 67.72)">#<tspan x="0" y="13.2">3</tspan></text></g>
+                        <g id="_4-3" data-name="$
+4"><text class="cls-3" transform="translate(200.63 68.12)">$<tspan x="0" y="13.2">4</tspan></text></g>
+                        <g id="_5-3" data-name="%
+5"><text class="cls-3" transform="translate(244.86 67.51)">%<tspan x="0" y="13.2">5</tspan></text></g>
+                        <g id="_6-3" data-name="^
+6"><text class="cls-3" transform="translate(289.04 67.48)">^<tspan x="0" y="13.2">6</tspan></text></g>
+                        <g id="_7-3" data-name="&amp;
+7"><text class="cls-3" transform="translate(333.41 67.76)">&amp;<tspan x="0" y="13.2">7</tspan></text></g>
+                        <g id="_8-3" data-name="*
+8"><text class="cls-3" transform="translate(378.36 67.89)">*<tspan x="0" y="13.2">8</tspan></text></g>
+                        <g id="_9-2" data-name="(
+9"><text class="cls-3" transform="translate(423.54 67.78)">(<tspan x="0" y="13.2">9</tspan></text></g>
+                        <g id="_0-2" data-name=")
+0"><text class="cls-3" transform="translate(467.59 67.96)">)<tspan x="0" y="13.2">0</tspan></text></g>
+                        <g id="__--2" data-name="_
+-"><text class="cls-3" transform="translate(513.49 68.28)">_<tspan x="0" y="13.2">-</tspan></text></g>
+                        <g id="_9-3" data-name="+
+="><text class="cls-3" transform="translate(558.07 67.67)">+<tspan x="0" y="13.2">=</tspan></text></g>
+                        <g id="Backspace-2" data-name="Backspace">
+                            <g id="Backspace-3" data-name="Backspace"><text class="cls-4"
+                                    transform="translate(603.87 63.91)">Backspace</text></g>
+                            <g id="Фигура_1" data-name="Фигура 1">
+                                <polygon class="cls-5"
+                                    points="630.75 71.25 609.48 71.25 609.48 68.98 605.04 71.54 609.48 74.11 609.48 72 630.75 72 630.75 71.25" />
+                            </g>
+                        </g>
+                        <g id="_10" data-name="~
+`"><text class="cls-3" transform="translate(22.15 64.87)">~<tspan x="0" y="13.2">`</tspan></text></g>
+                        <g id="_Текст_" data-name="&lt;Текст&gt;"><text class="cls-3"
+                                transform="translate(65.86 74.07)"> </text></g>
+                        <g id="Q-2" data-name="Q"><text class="cls-3" transform="translate(89.97 109.81)">Q</text></g>
+                        <g id="W-2" data-name="W"><text class="cls-3" transform="translate(136.32 109.81)">W</text></g>
+                        <g id="E-2" data-name="E"><text class="cls-3" transform="translate(178.49 109.81)">E</text></g>
+                        <g id="R-2" data-name="R"><text class="cls-3" transform="translate(223.37 109.81)">R</text></g>
+                        <g id="T-2" data-name="T"><text class="cls-6" transform="translate(266.65 109.81)">T</text></g>
+                        <g id="Y-2" data-name="Y"><text class="cls-3" transform="translate(313.55 109.81)">Y</text></g>
+                        <g id="U-2" data-name="U"><text class="cls-3" transform="translate(358.38 109.81)">U</text></g>
+                        <g id="I-2" data-name="I"><text class="cls-3" transform="translate(401.98 109.81)">I</text></g>
+                        <g id="O-2" data-name="O"><text class="cls-3" transform="translate(449.79 109.81)">O</text></g>
+                        <g id="P-2" data-name="P"><text class="cls-3" transform="translate(492.88 109.81)">P</text></g>
+                        <g id="_11" data-name="{
+["><text class="cls-3" transform="translate(538.38 109.81)">{<tspan x="0" y="13.2">[</tspan></text></g>
+                        <g id="_12" data-name="}
+]"><text class="cls-3" transform="translate(583.81 109.81)">}<tspan x="0" y="13.2">]</tspan></text></g>
+                        <g id="_13" data-name="|
+\"><text class="cls-3" transform="translate(627.31 109.81)">|<tspan x="0" y="13.2">\</tspan></text></g>
+                        <g id="Caps_Lock-2" data-name="Caps
+Lock"><text class="cls-3" transform="translate(25.13 153.56)">Caps<tspan x="0" y="12">Lock</tspan></text></g>
+                        <g id="A-2" data-name="A"><text class="cls-3" transform="translate(100.88 155.43)">A</text></g>
+                        <g id="S-2" data-name="S"><text class="cls-3" transform="translate(144.94 155.06)">S</text></g>
+                        <g id="D-2" data-name="D"><text class="cls-3" transform="translate(189.4 155.43)">D</text></g>
+                        <g id="F-2" data-name="F"><text class="cls-3" transform="translate(233.06 155.43)">F</text></g>
+                        <g id="G-2" data-name="G"><text class="cls-3" transform="translate(281.24 155.43)">G</text></g>
+                        <g id="H-2" data-name="H"><text class="cls-3" transform="translate(324.5 155.43)">H</text></g>
+                        <g id="J-2" data-name="J"><text class="cls-3" transform="translate(369.22 155.43)">J</text></g>
+                        <g id="K-2" data-name="K"><text class="cls-3" transform="translate(413.95 155.43)">K</text></g>
+                        <g id="L-2" data-name="L"><text class="cls-3" transform="translate(457.08 155.43)">L</text></g>
+                        <g id=":_2" data-name=":
+;"><text class="cls-3" transform="translate(503.53 155.43)">:<tspan x="0" y="12">;</tspan></text></g>
+                        <g id="_14" data-name="‘’
+‘"><text class="cls-3" transform="translate(547.36 155.43)">
+                                <tspan class="cls-7">‘</tspan>
+                                <tspan x="1.62" y="0">’</tspan>
+                                <tspan x="0" y="12">‘</tspan>
+                            </text></g>
+                        <g id="Enter-2" data-name="Enter">
+                            <g id="Фигура_2_Изображение" data-name="Фигура 2 Изображение">
+                                <image id="Фигура_2_Изображение-2" data-name="Фигура 2 Изображение" width="24"
+                                    height="10" transform="translate(597 159) scale(0.75)"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAKCAYAAACuaZ5oAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAnklEQVQoU72TMQrCQBBF3y45gOzubGsl2uYAHkYbK2+haO0hcjDBFEpuIIyFBjEkxo3og4Hh8z/DMIxRVX7FZDpT22f6lv8P8BJzL7FoMw8hqxsvcQRsgRVw6kwkknmJFlgCOyD0+JMxLsgBWDf0K3Bs8SdjXBALLIA9zw1KYN6ZSsDUf/C4wYb7Dcrqch6/C36Mqr6UC5K7IEVTH1o3s0tZryrcrOYAAAAASUVORK5CYII=" />
+                            </g>
+                            <g id="Enter-3" data-name="Enter"><text class="cls-4"
+                                    transform="translate(594.2 150.86)">Enter</text></g>
+                        </g>
+                        <g id="Shift"><text class="cls-8" transform="translate(574.11 200.53)">Shift</text></g>
+                        <g id="_15" data-name="?
+/"><text class="cls-8" transform="translate(526.01 196.48)">?<tspan x="0" y="12">/</tspan></text></g>
+                        <g id="_.-2" data-name="&gt;
+."><text class="cls-8" transform="translate(479.38 196.48)">&gt;<tspan x="0" y="12">.</tspan></text></g>
+                        <g id="_16" data-name="&lt;
+,"><text class="cls-8" transform="translate(434 196.48)">&lt;<tspan x="0" y="12">,</tspan></text></g>
+                        <g id="M-2" data-name="M"><text class="cls-8" transform="translate(392.94 196.48)">M</text></g>
+                        <g id="N-2" data-name="N"><text class="cls-8" transform="translate(347.72 196.48)">N</text></g>
+                        <g id="B-2" data-name="B"><text class="cls-8" transform="translate(302.33 196.48)">B</text></g>
+                        <g id="V-2" data-name="V"><text class="cls-8" transform="translate(257.78 196.48)">V</text></g>
+                        <g id="C-2" data-name="C"><text class="cls-8" transform="translate(211.4 196.48)">C</text></g>
+                        <g id="X-2" data-name="X"><text class="cls-8" transform="translate(167.68 196.48)">X</text></g>
+                        <g id="Z-2" data-name="Z"><text class="cls-8" transform="translate(120.79 196.48)">Z</text></g>
+                        <g id="Ctrl"><text class="cls-8" transform="translate(25.02 249.66)">Ctrl</text></g>
+                        <g id="Fn-2" data-name="Fn"><text class="cls-8" transform="translate(67.09 249.66)">Fn</text>
+                        </g>
+                        <g id="Alt"><text class="cls-8" transform="translate(156.97 249.66)">Alt</text></g>
+                        <g id="Alt-2" data-name="Alt"><text class="cls-8"
+                                transform="translate(431.91 249.66)">Alt</text></g>
+                        <g id="Ctrl-2" data-name="Ctrl"><text class="cls-8"
+                                transform="translate(487.79 249.66)">Ctrl</text></g>
+                        <g id="_-" data-name="-"><text class="cls-8" transform="translate(244.48 176.09)">-</text></g>
+                        <g id="_--2" data-name="-"><text class="cls-8" transform="translate(377.98 176.09)">-</text></g>
+                        <g id="arrLeft_Изображение" data-name="arrLeft Изображение">
+                            <image id="arrLeft_Изображение-2" data-name="arrLeft Изображение" width="16" height="7"
+                                transform="translate(528 255) scale(0.75)"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAg0lEQVQYV6XRwQnCQBSE4S8hBUiy69UaLMBi9OLJLhQ9W4SFCeag2IGwHpQYEqOCP8xlmIHHPCklbZUhTssQD11/SIUnVRyPsMESJz9SVHGcY4Etwpd8j6wMcY9Vx7/h+CbfIytDzDHHzuuCGrPBVosspYRmg7XHBvX1cp58Kjb8+4U7NoVnIECGhkUAAAAASUVORK5CYII=" />
+                        </g>
+                        <g id="arrUp_Изображение" data-name="arrUp Изображение">
+                            <image id="arrUp_Изображение-2" data-name="arrUp Изображение" width="7" height="16"
+                                transform="translate(579 228.75) scale(0.75)"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAg0lEQVQYV+XOMa5BURjE8Z/7NGg4ztFpJBagsCB6u6BVWJYtiE6Fl0hEKZ/m3pD3luDfTGYmk4yIEBFSLlXKZZdyqZqs8maBFZZN0IoIwzLq44CMK6a/l/OtWa7rQq0baKVcZtij7c0T859Ot7fFAA90cMIdYx9vJymXY+P/vv3Ht5Qv1iwvNh2hEg4AAAAASUVORK5CYII=" />
+                        </g>
+                        <g id="arrDown_Изображение" data-name="arrDown Изображение">
+                            <image id="arrDown_Изображение-2" data-name="arrDown Изображение" width="7" height="16"
+                                transform="translate(579 252) scale(0.75)"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAh0lEQVQYV+WRsQ3CQBRD3wUGQD//p6BEokWiock4sFQa6NiEiiIDIBa44yQGiPTTcNLRsACWXNiW3Rh3p1DUnqK2KbrhB/4lDKJ2BfqPXgMRmIBbELU9cAcWVWkCDk1OcQQGvjHkFMfg7rTWrYAHoMAL2OYU3/UjJ1FzUTsWb1lNnYEdcCnGDOf1N/aEwiOJAAAAAElFTkSuQmCC" />
+                        </g>
+                        <g id="arrRigth_Изображение" data-name="arrRigth Изображение">
+                            <image id="arrRigth_Изображение-2" data-name="arrRigth Изображение" width="16" height="7"
+                                transform="translate(622.5 255) scale(0.75)"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAkElEQVQYV42OMQrCQBBF34oHkN2dLSwsvIG1FzN4hJSmSaOdFxEbG09gYZsYyAVkUkQhbjTmwcDwmD98VJUxY70crZdV7CeMZw1cnITMSZi9pbFelgOhLidg/tofwAY4GOvl9jvzwQKYRm5nVPXbcQ8n4U77BNoGCbCPP/7jCeTAtiqLGvqVhjgDaVUW165sAJADQ0EG/Q4jAAAAAElFTkSuQmCC" />
+                        </g>
+                        <g id="windows_Изображение" data-name="windows Изображение">
+                            <image id="windows_Изображение-2" data-name="windows Изображение" width="20" height="22"
+                                transform="translate(114 239.25) scale(0.75)"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA/klEQVQ4T73VTUoDQRAF4K9kzEKE7FQQdKELF9FEUfDnUPEgLjyAx1HceRcVFxphXHSQJM5MpxHyoDZd9V5X//Aq6rpWiojYxQBHuMIhjtGruogQEYEbnOECJ9hHv7F+tsOI2J6SBjjFA57w0URuQhURY4xwiT1szOTf8NhEbEOF+478K4oueS2TLxIjL1iMlQv2EJmaOeQEv6exNCrpp29iMrMe0mYvdV1PImKIHXz+lfjFOt5zHRa/MonUFnfSzl01c5HrsJrG0sgJfik8dk6wGCsXLPrUpAu/1W5ffYWiiwa7hXPJzkeSwT4rMNjIzZR/jYBlsTCkrnGAIaofQ3hAN/Hu2lwAAAAASUVORK5CYII=" />
+                        </g>
+                        <g id="leftShift">
+                            <path class="cls-9"
+                                d="M32.63,190.22,38,199.33H35.26v4.42h-5v-4.42h-3l5.37-9.11m0-2L25.5,200.33h3.78v4.42h7v-4.42h3.49l-7.12-12.08Z" />
+                        </g>
+                        <g id="Tab_Изображение" data-name="Tab Изображение">
+                            <image id="Tab_Изображение-2" data-name="Tab Изображение" width="24" height="14"
+                                transform="translate(26.25 107.25) scale(0.75)"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAYAAAA1+Nx+AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACK0lEQVQ4T62Tu2tUQRSHv5l7J/sIeTB77xYaEpGYTWGRNCKIaGFjLfkHbGyMryJErMWgoGjSWKhd/gXLbJCAWGSxMjbiytrsZkMe7Ctz74zNJm5WITHmgx8M5zAz58z5DaNjOeeco1M6CCd1EC52x48jnw4yYXYQeAzcAn5yAvgAmTArgZvAEyDYS+bzy2+cczkHIjImGcexEkJYKWWklGr19PQ0lFK1ZrOZajQafZ7nRYlEop5Op88CSSnldTE6lnMbGxvzwHTX5dHQ0FCjt7c3BeCcA3DtnJBSIqX0AYQQdCOE4OWL52t7T3QP+AzM8buDcqlUuty1SSilPCmlNzszc3V4ZOTKzvb29zCbveOsVVEU+cYYI4SoDwwMrE1MTFykc8g6CAd1EC7oIDQ6CIuHDfAokp0VVivlzWqlfBu4AKxwEhxWwVGkg3BRB+Fkd3x0LOcOdPAfXAI+ZcLsQtvq+wjnHEtL+Y9bW1vjzrm0Ukr5vh8JKU2lXH7V199/5kexuDz39GneWhsbY2LnnOMgH4BT7fU6MAu801rHolAofLl7/8H4n3v2rYm1NrLWQodN96xZq9UapVIpBQc/LTCvtZ4Wq6uF89ba90CzXq9/a7Va6TiO/VQqtZNMJhvGmN7d3d2UMSZhrfWdc9LzPOMr1RTghBBfb0xNXQOG2wevAw+Bt1rrWPyt8n8lE2aLwGngNfCoWilvApzLjbvuto7LCvCsWikXuhO/AJy5i8Eq3OK0AAAAAElFTkSuQmCC" />
+                        </g>
+                    </g>
+                    <g id="keyboardCyrillic">
+                        <g id="Й"><text class="cls-10" transform="translate(104.66 127.5)">Й</text></g>
+                        <g id="Ц"><text class="cls-10" transform="translate(148.35 127.5)">Ц</text></g>
+                        <g id="У"><text class="cls-10" transform="translate(194.84 127.5)">У</text></g>
+                        <g id="К"><text class="cls-10" transform="translate(238.93 127.5)">К</text></g>
+                        <g id="Е"><text class="cls-10" transform="translate(283.25 127.5)">Е</text></g>
+                        <g id="Н"><text class="cls-10" transform="translate(326.04 127.5)">Н</text></g>
+                        <g id="Г"><text class="cls-10" transform="translate(373.38 127.5)">Г</text></g>
+                        <g id="Ш"><text class="cls-10" transform="translate(413.4 127.5)">Ш</text></g>
+                        <g id="Щ"><text class="cls-10" transform="translate(458.09 127.5)">Щ</text></g>
+                        <g id="З"><text class="cls-10" transform="translate(505.72 127.5)">З</text></g>
+                        <g id="Х"><text class="cls-10" transform="translate(550.05 127.5)">Х</text></g>
+                        <g id="Ъ"><text class="cls-10" transform="translate(593.9 127.5)">Ъ</text></g>
+                        <g id="_17" data-name="/
+\"><text class="cls-10" transform="translate(642.72 114.62)">/<tspan x="0" y="12">\</tspan></text></g>
+                        <g id="Ф"><text class="cls-10" transform="translate(115.26 171)">Ф</text></g>
+                        <g id="Ы"><text class="cls-10" transform="translate(158.49 171)">Ы</text></g>
+                        <g id="В"><text class="cls-10" transform="translate(206.15 171)">В</text></g>
+                        <g id="А"><text class="cls-10" transform="translate(250.07 171)">А</text></g>
+                        <g id="П"><text class="cls-10" transform="translate(292.9 171)">П</text></g>
+                        <g id="Р"><text class="cls-10" transform="translate(338.81 171)">Р</text></g>
+                        <g id="О"><text class="cls-10" transform="translate(383.19 171)">О</text></g>
+                        <g id="Л"><text class="cls-10" transform="translate(427.22 171)">Л</text></g>
+                        <g id="Д"><text class="cls-10" transform="translate(471.73 169.69)">Д</text></g>
+                        <g id="Ж"><text class="cls-10" transform="translate(513.51 171)">Ж</text></g>
+                        <g id="Э"><text class="cls-10" transform="translate(561.09 171)">Э</text></g>
+                        <g id="Я"><text class="cls-10" transform="translate(138.5 213.75)">Я</text></g>
+                        <g id="Ч"><text class="cls-10" transform="translate(182.22 213.75)">Ч</text></g>
+                        <g id="С"><text class="cls-10" transform="translate(227.59 213.75)">С</text></g>
+                        <g id="М"><text class="cls-10" transform="translate(269.4 213.75)">М</text></g>
+                        <g id="И"><text class="cls-10" transform="translate(314.66 213.75)">И</text></g>
+                        <g id="Т"><text class="cls-11" transform="translate(361.15 213.75)">Т</text></g>
+                        <g id="Ь"><text class="cls-10" transform="translate(405.6 213.75)">Ь</text></g>
+                        <g id="Б"><text class="cls-10" transform="translate(449.82 213.75)">Б</text></g>
+                        <g id="Ю"><text class="cls-10" transform="translate(491.92 213.75)">Ю</text></g>
+                        <g id="_18" data-name="«"><text class="cls-10" transform="translate(131.34 82.5)">«</text></g>
+                        <g id="_19" data-name="№"><text class="cls-10" transform="translate(170.94 82.5)">№</text></g>
+                        <g id="_20" data-name=";"><text class="cls-10" transform="translate(223.42 81.29)">;</text></g>
+                        <g id=":"><text class="cls-10" transform="translate(311.59 82.5)">:</text></g>
+                        <g id="_21" data-name="?"><text class="cls-10" transform="translate(353.31 82.5)">?</text></g>
+                        <g id="_.-3" data-name=",
+."><text class="cls-10" transform="translate(542.36 201.76)">,<tspan x="0" y="12">.</tspan></text></g>
+                        <g id="Ё"><text class="cls-10" transform="translate(39.5 82.5)">Ё</text></g>
+                    </g>
+                    <g id="keyboardFingers">
+                        <g id="keyboardFingersRight">
+                            <g id="Эллипс_1_Изображение" data-name="Эллипс 1 Изображение" class="cls-12">
+                                <use id="Эллипс_1_Изображение-2" data-name="Эллипс 1 Изображение"
+                                    transform="translate(354 132.75) scale(0.75)" xlink:href="#image" />
+                            </g>
+                            <g id="Эллипс_1_копия_4_Изображение" data-name="Эллипс 1 копия 4 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_4_Изображение-2" data-name="Эллипс 1 копия 4 Изображение"
+                                    transform="translate(331.5 176.25) scale(0.75)" xlink:href="#image" />
+                            </g>
+                            <g id="Эллипс_1_копия_Изображение" data-name="Эллипс 1 копия Изображение" class="cls-12">
+                                <use id="Эллипс_1_копия_Изображение-2" data-name="Эллипс 1 копия Изображение"
+                                    transform="translate(399.75 134.25) scale(0.75)" xlink:href="#image" />
+                            </g>
+                            <g id="Эллипс_1_копия_2_Изображение" data-name="Эллипс 1 копия 2 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_2_Изображение-2" data-name="Эллипс 1 копия 2 Изображение"
+                                    transform="translate(444.75 135) scale(0.75)" xlink:href="#image" />
+                            </g>
+                            <g id="Эллипс_1_копия_3_Изображение" data-name="Эллипс 1 копия 3 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_3_Изображение-2" data-name="Эллипс 1 копия 3 Изображение"
+                                    transform="translate(489 133.5) scale(0.75)" xlink:href="#image" />
+                            </g>
+                        </g>
+                        <g id="keyboardFingersLeft">
+                            <g id="Эллипс_1_копия_6_Изображение" data-name="Эллипс 1 копия 6 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_6_Изображение-2" data-name="Эллипс 1 копия 6 Изображение"
+                                    transform="translate(87.75 133.5) scale(0.75)" xlink:href="#image-2" />
+                            </g>
+                            <g id="Эллипс_1_копия_5_Изображение" data-name="Эллипс 1 копия 5 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_5_Изображение-2" data-name="Эллипс 1 копия 5 Изображение"
+                                    transform="translate(243 177) scale(0.75)" xlink:href="#image-2" />
+                            </g>
+                            <g id="Эллипс_1_копия_6_Изображение-3" data-name="Эллипс 1 копия 6 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_6_Изображение-4" data-name="Эллипс 1 копия 6 Изображение"
+                                    transform="translate(132 134.25) scale(0.75)" xlink:href="#image-2" />
+                            </g>
+                            <g id="Эллипс_1_копия_6_Изображение-5" data-name="Эллипс 1 копия 6 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_6_Изображение-6" data-name="Эллипс 1 копия 6 Изображение"
+                                    transform="translate(177 135) scale(0.75)" xlink:href="#image-2" />
+                            </g>
+                            <g id="Эллипс_1_копия_6_Изображение-7" data-name="Эллипс 1 копия 6 Изображение"
+                                class="cls-12">
+                                <use id="Эллипс_1_копия_6_Изображение-8" data-name="Эллипс 1 копия 6 Изображение"
+                                    transform="translate(222 132.75) scale(0.75)" xlink:href="#image-2" />
+                            </g>
+                        </g>
+                    </g>
+                    <g id="keyboardZone">
+                        <g id="keyboardZoneRight">
+                            <g id="background_Изображение" data-name="background Изображение" class="cls-13">
+                                <image id="background_Изображение-2" data-name="background Изображение" width="493"
+                                    height="376" transform="translate(300.75 0) scale(0.75)"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAe0AAAF4CAYAAAB5H6ELAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAHl0lEQVR4Xu3du6pcZRiA4W9LtBBsRAtBtHOw1wuwF8FqsLXxAHoDDjbOJUQ8IFaephIEW72AaO/YGrExlQdwCxmLsCGEbUbQZK8Xn6db//pmWN3LB8Oak8PhMFWb1a778AD8H/wxM7/NzI8z8/3MfDMzX8/Mle1+ff12HzzPiWgDwF33w8x8PDNvb/frq8eGz4g2AFyc05n5YGbe3O7X144N33NsAAC4Y+6bmVdn5rvNarc+NizaAHDxHpqZzzar3Tub1e7S3w2JNgAsx8sz8/lmtbv/vJuiDQDL8uzMfHrexi3aALA8z83M5VsPRRsAlumlzWr3ws0Hog0Ay3V5s9o9fHYh2gCwXA/OzFtnF6INAMv24ma1e2xGtAFg6e6dmVdmvMYUAAquzszjNm0AWL5HZ+Zp0QaAhmdEGwAanhJtAGhYiTYANDwi2gDQ8IBoA0DDfaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEZeODdxJm9XucGwGALjBpg0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABGiDQARog0AEaINABEnbzzx2eHYEABw8WzaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABAh2gAQIdoAECHaABBxcjgcjs3c1ma1+3dfAAD8IzZtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIODkcDsdmFmWz2rUeGAD+IzZtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AiBBtAIgQbQCIEG0AaDgVbQBo+EW0AaDhJ9EGgIa9aANAwzeiDQANX4s2ACzf1Zm5ItoAsHwfbffr66INAMt2OjNvz3i5CgAs3Yfb/frqjGgDwJJdm5nN2YVoA8Byvb7dr6+dXYg2ACzT+9v9+pObD0QbAJbni5l57dZD0QaAZflyZl7Y7tent94QbQBYjvdm5vntfv37eTcvnXcIANxVP8+NH519ershmzYAXJzTmXl3Zp48FuwZmzYAXIQfZ+ajmbl89uKUf0K0AeDO+XNmfp0bf/jx/cx8OzNfzcyV7X59/XYfPM9fHWqCvlI20ZsAAAAASUVORK5CYII=" />
+                            </g>
+                            <g id="Right"><text class="cls-14" transform="translate(489.55 15.7)">Right</text></g>
+                        </g>
+                        <g id="keyboardZoneLeft">
+                            <g id="backgound_Изображение" data-name="backgound Изображение" class="cls-13">
+                                <image id="backgound_Изображение-2" data-name="backgound Изображение" width="448"
+                                    height="376" transform="translate(0 0) scale(0.75)"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcAAAAF4CAYAAADDvClrAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAHyElEQVR4Xu3dv4tsdx3H4c+ebBTij0YbyY1lgnVMY2eKqWTslEHLFBHFP8FC/A80oCDYCBMLm2mEaewDWitYBmxMJVhEcCxy93JjdvcYMLj3vJ6nGmbep37xHebMubpcLvNxnffHZWZem5mvz8xXZ+blmXlxZj4zM5++51IAeBCu1wZPO++Pj2bm+zPznZl5aWUOAA/WfxXA8/74hZn58cy8MTOfWpkDwIO3GsDz/vitmXlrZr64tgWAZ8WdATzvj9cz89OZefOuDQA8q24N4Hl/fGFmfjMz37jtcwB41l39569AH5/8fjsz+1uvAIANWG5572cjfgBs3IdOgOf98dsz8/bdcwDYhicBfHyrw5/Grz0BCHj6K9CfjPgBEHF1uVzmvD9+eWb+MjPPr10AAFtwcwL83ogfACHPfe2Prywz86uZ+fzaGAC24uapDo/WhgCwJcvMvL42AoCtWWbm1bURAGzNMjOvrI0AYGuWmfnS2ggAtmaZmc+tjQBga5bxhHcAgm57GgQAbJ4AApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApB0vTYAgIdodzpcrW3u4wQIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkXa8NAOAuu9Pham3zUDkBApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkCSAASQIIQJIAApAkgAAkXa8NAOAu5/3xsra5z+50uFrbfFKcAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCBJAAFIEkAAkgQQgCQBBCDpem0AAJ+U8/54Wdv8L+1Oh6ub106AACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkCSAACQJIABJAghAkgACkLTMzPtrIwDYmmVm/r42AoCtWWbmr2sjANiaZWb+vDYCgK1ZZuYPayMA2JplZn6/NgKArVlm5p2ZeXdtCABbsuxOh3/NzK/XhgCwJTc3wr817gcEIGSZmdmdDu/OzC9XtgCwGU//FdqPZua9u4YAsCVPArg7Hd6bmR/cswWAzfjQn2HvToe3Z+YXd2wBYDNuexrED2fmdMv7ALAZHwng7nR4f2YOM/O7j84BYBtufR7g7nT4x8x8c3wdCsBG3flA3N3p8M/d6fDmfHAa/NtdOwB4Fq0+Ef7xD2O+MjM/HzfLA7ARV5fLZW3zxHl/fDQf3Crx3Zl5cWUOAA/K7nS4unn9sQJ447w/LjPz2sy8PjOvzszLM/NoZj47M8/fcykA/N88HcB/A75ob8CPbnl/AAAAAElFTkSuQmCC" />
+                            </g>
+                            <g id="Left"><text class="cls-15" transform="translate(157.83 15.66)">Left</text></g>
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../../settings/js/load.js" type="module"></script>
+    <script src="../../../settings/js/main.js" type="module"></script>
+    <script src="../../../settings/js/mode/modeMyText.js"></script>
+    <script src="../../../settings/js/exercises.js" type="module"></script>
+
+</body>
+
+</html>

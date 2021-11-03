@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 20px 0 20px;
+    margin: auto;
+}
+
+.header__menu-ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu-ul--press {
+    margin: 0;
+    padding: 10px 0;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);  
+    position: absolute;   
+    opacity: 95%;
+    display: none; 
+}
+
+.header__menu-li {
+    outline: none;
+    border: none;
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header__menu-li:focus-within {
+    color: #111315;
+    background-color: #ffffff;
+}
+
+.header__menu-li--press {
+    width: 200px;
+    padding: 5px 0;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+/* .header__menu-li--press:hover {
+    color: #111315;
+} */
+
+.main {
+    text-align: center;
+}
+
+.mainIndent {
+    margin-bottom: 40px;
+}
+
+.mainBlackButton {
+    border: none;
+    border-radius: 10px;
+    padding: 15px 70px;
+    transition: 0.5s;
+}
+
+.mainBlackButton:hover {
+    cursor: pointer;
+    background-color: #c95f35;
+}
+
+.main__keyboard {
+    margin: auto;
+    max-width: 700px;
+}
+
+
+
+/* Colors */
+
+
+/* main-bg */
+
+.mainColor1-bg {
+    background-color: #e8e8e8;
+}
+
+.mainColor2-bg {
+    background-color: #111315;
+}
+
+.mainColor3-bg {
+    background-color: #ffffff;
+}
+
+.mainColor4-bg {
+    background-color: #a2a2a2;
+}
+
+/* seconds-bg */
+
+.secondColor1-bg {
+    background-color: #bfe6c7;
+}   
+
+.secondColor2-bg {
+    background-color: #e6bfd1;
+}  
+
+.secondColor3-bg {
+    background-color: #266baf;
+}  
+
+
+
+/* main */
+
+.mainColor1 {
+    color: #e8e8e8;
+}
+
+.mainColor2 {
+    color: #111315;
+}
+
+.mainColor3 {
+    color: #ffffff;
+}
+
+.mainColor4 {
+    color: #a2a2a2;
+}
+
+/* seconds */
+
+.secondColor1 {
+    color: #bfe6c7;
+}   
+
+.secondColor2 {
+    color: #e6bfd1;
+}  
+
+.secondColor3 {
+    color: #266baf;
+    background-color: #aad5ff;
+}  
+
+
+
+
+.transition {
+    transition: 0.5s;
+}
+
+
+.transition:hover {
+    color: #111315;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+
+
+.shadow {
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);  
+}
+
+
+
+
+
+
+/* keybord style */
+
+.cls-1 {
+    fill: #111315;
+}
+
+.cls-2 {
+    fill: #e3e3e3;
+    transition: 0.3s;
+}
+
+/* .cls-2:hover {
+    fill: #9cb8e2;
+} */
+
+.cls-10,
+.cls-11,
+.cls-3,
+.cls-6,
+.cls-8 {
+    font-size: 11px;
+}
+
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6 {
+    fill: #121415;
+}
+
+.cls-10,
+.cls-11,
+.cls-3,
+.cls-4,
+.cls-6,
+.cls-8 {
+    font-family: Roboto-Regular, Roboto;
+}
+
+.cls-4 {
+    font-size: 9px;
+}
+
+.cls-11,
+.cls-6 {
+    letter-spacing: -0.02em;
+}
+
+.cls-7 {
+    letter-spacing: -0.05em;
+}
+
+.cls-8,
+.cls-9 {
+    fill: #242627;
+}
+
+.cls-10,
+.cls-11 {
+    fill: #656565;
+}
+
+.cls-12 {
+    opacity: 0.5;
+}
+
+.cls-13 {
+    opacity: 0.6;
+}
+
+.cls-14,
+.cls-15 {
+    font-size: 12px;
+    font-family: Roboto-Light, Roboto;
+    font-weight: 300;
+}
+
+.cls-14 {
+    fill: #7b26a8;
+}
+
+.cls-15 {
+    fill: #b94da6;
+}
