@@ -24,7 +24,7 @@ export function cleanSelectLetter(text) {
 export function isUpper(str, lang) {
     if (lang == 'ru') {
         if(/[ёа-я]/.test(str) || /[ЁА-Я]/.test(str)) return !/[ёа-я]/.test(str) && /[ЁА-Я]/.test(str);
-        else if(/[!"№;%:?*()_+/,]/.test(str)) return true;
+        else if(/[!"№;%:?*()_+/,»«]/.test(str)) return true;
         else return null;
     }
 
