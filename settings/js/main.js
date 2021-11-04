@@ -30,25 +30,15 @@ headerMenu[3].onclick = function() {
     showHideHeaderSubMenu(headerSubMenu, 1, 'block');
 }
 
+document.body.onclick = () => {
+    if (headerMenu[1] != document.activeElement) setTimeout( () => {showHideHeaderSubMenu(headerSubMenu, 0, 'none')}, 100);
+    if (headerMenu[3] != document.activeElement) setTimeout( () => {showHideHeaderSubMenu(headerSubMenu, 1, 'none')}, 100);
+};
 
 
 function showHideHeaderSubMenu(item, i, x) {
     item[i].style.display = x;
 }
-
-
-function checkSubMenuIsActive() {
-
-    if(headerMenu[1] != document.activeElement) {
-        showHideHeaderSubMenu(headerSubMenu, 0, 'none');
-    }
-    if(headerMenu[3] != document.activeElement) {
-        showHideHeaderSubMenu(headerSubMenu, 1, 'none');
-    }
-}
-
-
-setInterval(checkSubMenuIsActive, 100);
 
 
 if (exercisesMode == exercisesModeAll.def) {
