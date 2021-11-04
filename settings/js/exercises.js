@@ -84,7 +84,7 @@ let statistics = {
     time: null,
     countPositive: 0,
     countNegative: 0,
-    allSumbols: new Set(),
+    allSumbols: 0,
 };
 
 let formatterDate = new Intl.DateTimeFormat('ru', {
@@ -225,7 +225,12 @@ function loadCodeExercises() {
 
     function chowTextForDisplayFrase(text) {
 
-        screenText.innerHTML = text[getRandomIndex(0, text.length - 1)];
+        if(!arrTextForDisplay || arrTextForDisplay.length == 0) {
+            arrTextForDisplay = checkLengthText([text[getRandomIndex(0, text.length - 1)]], maxLengthDisplayText);
+        }
+
+        screenText.innerHTML = arrTextForDisplay[0];
+        arrTextForDisplay.shift();
 
     }
 
@@ -569,7 +574,6 @@ function loadCodeExercises() {
                 setColorToKeys(keyPress, colors.keyboardKeysNegative);
                 if (!statistics.positive.has(indexSelectLetter)) {
                     statistics.negative.add(indexSelectLetter);
-                    statistics.allSumbols.add(indexSelectLetter);
                 }
                 statistics.countNegative++;
                 keyPressResult = 0;
@@ -585,12 +589,12 @@ function loadCodeExercises() {
 
             if (!statistics.negative.has(indexSelectLetter)) {
                 statistics.positive.add(indexSelectLetter);
-                statistics.allSumbols.add(indexSelectLetter);
             }
 
             statistics.countPositive++;
             indexSelectLetter++;
             keyPressResult = 1;
+            statistics.allSumbols++;
 
             cleanSelectLetterOnKeyboard(false);
 
@@ -698,8 +702,10 @@ function loadCodeExercises() {
 
         statistics.time = formatterDate.format(new Date(timeCount));
 
-        let timeSmbMin = (new Date(timeCount).getHours() * 60 * 60) + (new Date(timeCount).getMinutes() * 60) + (new Date(timeCount).getSeconds());
-        let allSumb = 0;
+        let timeSmbMin = (new Date(timeCount).getHours() * 60 * 60) + 
+                         (new Date(timeCount).getMinutes() * 60) + 
+                         (new Date(timeCount).getSeconds());
+
         let result;
         let title;
 
@@ -712,18 +718,14 @@ function loadCodeExercises() {
         let accuracy = ((statistics.countPositive * 100) / (statistics.countNegative + statistics.countPositive)).toFixed() + '%';
         if (accuracy == 'NaN%') accuracy = '?'
 
-        statistics.allSumbols.forEach(() => {
-            allSumb++;
-        });
-
-        timeSmbMin = ((allSumb / timeSmbMin) * 60).toFixed();
+        timeSmbMin = ((statistics.allSumbols / timeSmbMin) * 60).toFixed();
         if (timeSmbMin == 'NaN') timeSmbMin = 0;
 
         if (lang == 'ru') {
 
             result = `<p class="statisticsEnd">Ваша скорость печати (символов в минуту) — <span>${timeSmbMin}</span></p>
                   <p class="statisticsEnd">Точность — <span>${accuracy}<span></p>
-                  <p class="statisticsEnd">Символов напечатано — <span>${allSumb}</span></p>
+                  <p class="statisticsEnd">Символов напечатано — <span>${statistics.allSumbols}</span></p>
                   <p class="statisticsEnd">Затраченное время — <span>${statistics.time}</span></p>`;
 
             if (exercisesMode == exercisesModeAll.forBeginers) {
@@ -760,7 +762,7 @@ function loadCodeExercises() {
             time: null,
             countPositive: 0,
             countNegative: 0,
-            allSumbols: new Set(),
+            allSumbols: 0,
         };
 
         timerScreen.innerHTML = formatterDate.format(new Date(timeCount));
