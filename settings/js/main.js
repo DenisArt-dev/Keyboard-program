@@ -33,6 +33,9 @@ headerMenu[3].onclick = function() {
 document.body.onclick = () => {
     if (headerMenu[1] != document.activeElement) setTimeout( () => {showHideHeaderSubMenu(headerSubMenu, 0, 'none')}, 100);
     if (headerMenu[3] != document.activeElement) setTimeout( () => {showHideHeaderSubMenu(headerSubMenu, 1, 'none')}, 100);
+    if (hideWindowChoseMode && mainButtonHomePage != document.activeElement) {
+        setTimeout( () => {hideWindowChoseMode.style.display = 'none'}, 100);
+    } 
 };
 
 
