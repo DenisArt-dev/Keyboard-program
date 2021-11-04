@@ -16,6 +16,8 @@ export const colors = {
 
 const headerMenu = document.getElementsByClassName('header__menu-li');
 const headerSubMenu = document.getElementsByClassName('header__menu-ul--press');
+const hideWindowChoseMode = document.getElementById('hideWindowChoseMode');
+const mainButtonHomePage = document.getElementById('mainButtonHomePage');
 
 
 // show & hide subMenu
@@ -47,3 +49,18 @@ function checkSubMenuIsActive() {
 
 
 setInterval(checkSubMenuIsActive, 100);
+
+
+if (exercisesMode == exercisesModeAll.def) {
+    loadCodeHomePage();
+}
+
+function loadCodeHomePage() {
+
+    mainButtonHomePage.onclick = () => {
+
+        hideWindowChoseMode.style.display = 'block';
+
+    }
+
+}

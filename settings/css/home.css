@@ -9,3 +9,23 @@
     margin-right: 150px;
 }
 
+.hideWindowChoseMode {
+    margin-top: 200px;
+    padding: 20px 20px 10px;
+}
+
+.hideWindowChoseMode__ul {
+    padding: 0;
+}
+
+.hideWindowChoseMode-li {
+    list-style: none;
+    padding: 7px;
+    transition: 0.3s;
+}
+
+.hideWindowChoseMode-li:hover {
+    cursor: pointer;
+    background-color: #111315;
+    color: #ffffff;
+}

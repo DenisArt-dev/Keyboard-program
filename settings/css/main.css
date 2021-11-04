@@ -56,9 +56,6 @@ a {
     cursor: pointer;
 }
 
-/* .header__menu-li--press:hover {
-    color: #111315;
-} */
 
 .main {
     text-align: center;
@@ -69,7 +66,7 @@ a {
 }
 
 .mainBlackButton {
-    border: none;
+    border: solid 2px #111315;
     border-radius: 10px;
     padding: 15px 70px;
     transition: 0.5s;
@@ -77,13 +74,125 @@ a {
 
 .mainBlackButton:hover {
     cursor: pointer;
-    background-color: #c95f35;
+    color: #111315;
+    background-color: rgba(0,0,0,0);
+    /* opacity: 0; */
 }
 
 .main__keyboard {
     margin: auto;
     max-width: 700px;
 }
+
+
+
+
+
+
+/* HideWondows */
+
+.hideWindow {
+    text-align: center;
+    position: absolute;
+    padding: 20px 20px 5px 20px;
+    opacity: 0.95;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    margin: 105px 0;
+    display: none;
+}
+
+.hideWindowButtons {
+    margin: 15px;
+    border: none;
+    width: 120px;
+    padding: 5px 0;
+}
+
+.hideWindowTitle {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hideWindowSetTimer__buttons {
+    display: flex;
+    margin: 7px auto 0;
+}
+
+.hideWindow__swg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hideWindow__swg-bottom {
+    margin-top: -4px;
+    transform:rotate(180deg);
+}
+
+.hideWindowSwg svg {
+    fill: #a2a2a2;
+}
+
+
+.hideWindowSwg svg:hover {
+    cursor: pointer;
+    fill: #111315;
+}
+
+
+
+.hideWindowChooseLesson {
+    margin: 130px 0;
+    display: none;
+}
+
+.hideWindowChooseLesson__buttons {
+    display: flex;
+}
+
+.hideWindow__lessons {
+    margin-top: 20px;
+}
+
+.buttonsLessons {
+    margin: auto 5px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255,255,255,.05);
+}
+
+
+.hideWindowChoseNeweText__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.hideWindowTexarea {
+    margin-top: 20px;
+    outline: none;
+    border-radius: 0%;
+    border-color: #a2a2a2;
+    resize: none;
+    width: 450px;
+    padding: 5px;
+}
+
+.choseNeweTextDescription {
+    font-size: 11px;
+    margin-top: 3px;
+    color: rgb(228, 13, 13);
+    text-align: left;
+}
+
+.hideWindowChoseNeweText {
+    margin-top: 210px;
+}
+
+
+
+
+
+
+
 
 
 
