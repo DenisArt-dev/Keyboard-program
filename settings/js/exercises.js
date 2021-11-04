@@ -755,6 +755,7 @@ function loadCodeExercises() {
         lastKey = undefined;
         pauseSwich = false;
         isSetHideTimer = null;
+        arrTextForDisplay = null;
 
         statistics = {
             positive: new Set(),
