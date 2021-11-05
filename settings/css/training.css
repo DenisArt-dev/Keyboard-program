@@ -33,10 +33,6 @@ span {
     font-weight: 800;
 }
 
-.firstScreen {
-    /* display: none; */
-}
-
 .secondScreen {
     display: none;
     width: 700px;

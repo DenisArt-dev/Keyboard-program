@@ -56,6 +56,15 @@ a {
     cursor: pointer;
 }
 
+.buttonLang {
+    padding-left: 10px;
+}
+
+.buttonLang img {
+    height: 10px;
+    padding-left: 10px;
+}
+
 
 .main {
     text-align: center;
