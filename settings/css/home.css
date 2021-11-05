@@ -9,6 +9,10 @@
     margin-right: 150px;
 }
 
+.main__button button {
+    padding: 15px 70px;
+}
+
 .hideWindowChoseMode {
     margin-top: 200px;
     padding: 20px 20px 10px;

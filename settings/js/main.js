@@ -5,6 +5,7 @@ export const exercisesModeAll = {
     symb: 'Symbol',
     myText: 'MyText',
     def: 'Home',
+    training: 'Training',
 };
 
 export const colors = {

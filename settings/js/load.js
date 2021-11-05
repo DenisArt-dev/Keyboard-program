@@ -38,16 +38,6 @@ function takeKeyboard() {
 }
 
 
-function hideKeyboadAdd(keyboard) {
-    keyboard.zone.left.style.display = 'none';
-    keyboard.zone.right.style.display = 'none';
-    keyboard.fingers.left.style.display = 'none';
-    keyboard.fingers.right.style.display = 'none';
-}
-
-hideKeyboadAdd(keyboard);
-
-
 
 function showHideWindowMyText() {
 

@@ -68,7 +68,6 @@ a {
 .mainBlackButton {
     border: solid 2px #111315;
     border-radius: 10px;
-    padding: 15px 70px;
     transition: 0.5s;
 }
 
@@ -291,6 +290,14 @@ a {
 
 /* keybord style */
 
+.keyboardZone {
+    display: none;
+}
+
+.keyboardFingers {
+    display: none;
+}
+
 .cls-1 {
     fill: #111315;
 }
@@ -356,7 +363,7 @@ a {
 }
 
 .cls-13 {
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .cls-14,

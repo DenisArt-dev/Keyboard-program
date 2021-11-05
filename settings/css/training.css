@@ -1,0 +1,51 @@
+
+.main__title {
+    font-size: 22px;
+}
+
+.main__description {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.main__content {
+    display: flex;
+    justify-content: center;
+}
+
+.main__button-rule1 {
+    padding: 3px 10px;
+}
+
+.main__button-button {
+    padding: 5px 30px;
+    margin-bottom: 20px;
+    margin-top: -25px;
+}
+
+.main__rules {
+    width: 350px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+span {
+    font-weight: 800;
+}
+
+.firstScreen {
+    /* display: none; */
+}
+
+.secondScreen {
+    display: none;
+    width: 700px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    padding: 5px 15px;
+}
+
+.secondScreen p {
+    text-align: left;
+}
+
