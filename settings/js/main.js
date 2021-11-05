@@ -12,6 +12,11 @@ export const colors = {
     keyboardKeysFocus: '#a5a7eb',
     keyboardKeysPositive: '#a8eb9b',
     keyboardKeysNegative: '#ed8e8e',
+    displayNegative: '#ff4d4d',
+    mainColor1: '#e8e8e8',
+    mainColor2: '#111315',
+    mainColor3: '#ffffff',
+    mainColor4: '#a2a2a2',
 };
 
 const headerMenu = document.getElementsByClassName('header__menu-li');

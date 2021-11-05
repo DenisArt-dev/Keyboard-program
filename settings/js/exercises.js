@@ -18,6 +18,9 @@ const fontSizeInner = document.getElementById('fontSizeInner');
 const fontSizePlus = document.getElementById('fontSizePlus');
 const fontSizeMinus = document.getElementById('fontSizeMinus');
 
+const countSymbolsHTML = document.getElementById('countSymbolsHTML');
+
+const screenDisplay = document.getElementsByClassName('screen__display');
 const screenText = document.getElementById('screenText');
 
 const buttonStart = document.getElementById('buttonStart');
@@ -560,6 +563,9 @@ function loadCodeExercises() {
 
     function trackingKeystrokesDown(event) {
 
+        if (event.code == 'Escape') doPause();
+        if (pauseSwich) return;
+
         isKeyPress = true;
 
         let keyPress = keyboard.keys.get(event.code);
@@ -572,6 +578,7 @@ function loadCodeExercises() {
                 nextStep();
             } else if (keyPress.key[3]) {
                 setColorToKeys(keyPress, colors.keyboardKeysNegative);
+                screenDisplay[0].style.backgroundColor = colors.keyboardKeysNegative;
                 if (!statistics.positive.has(indexSelectLetter)) {
                     statistics.negative.add(indexSelectLetter);
                 }
@@ -602,10 +609,11 @@ function loadCodeExercises() {
 
         }
 
-        if (event.code == 'Escape') doPause();
         if (event.code == 'Enter' && pauseSwich) doPause();
         if (event.code == 'Space' || event.code == 'Enter') start(exercisesMode);
         if (event.key == 'Shift') isShiftPress = true;
+
+        countSymbolsHTML.innerHTML = statistics.allSumbols;
 
     }
 
@@ -615,7 +623,7 @@ function loadCodeExercises() {
 
         let keyPress = keyboard.keys.get(event.code);
 
-        if (selectLetterGlobal && !pauseSwich && keyPress.key[1] != 'Escape') {
+        if (selectLetterGlobal && keyPress.key[1] != 'Escape') {
 
             if (!lastKey || lastKey[0] != keyNeed[0]) setColorToKeys(keyPress, colors.keyboardKeysDef);
             if (keyPressResult == 0) setColorToKeys(keyPress, colors.keyboardKeysDef);
@@ -623,6 +631,7 @@ function loadCodeExercises() {
 
         }
 
+        screenDisplay[0].style.backgroundColor = colors.mainColor3;
 
     }
 
@@ -689,6 +698,8 @@ function loadCodeExercises() {
         clearInterval(idIntervalTimeCount);
         cleanSelectLetterOnKeyboard(true);
         showStatisticsEnd(language);
+
+        countSymbolsHTML.innerHTML = 0;
 
         if (isSetHideTimer) clearInterval(idIntervalTimeCount);
 
@@ -865,9 +876,6 @@ function loadCodeExercises() {
     }
 
     // / // 
-
-
-
 
 }
 

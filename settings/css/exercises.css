@@ -42,6 +42,11 @@
 
 
 
+.screen__botom-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 
 
