@@ -255,6 +255,11 @@ function loadCodeExercises() {
     function refreshScreen() {
 
         let text = cleanSelectLetter(screenText.innerHTML).split('');
+
+        text.forEach( (item, i) => {
+            if (isUpper(item, language) == null) text[i] = '*';
+        } );
+
         selectLetterGlobal = text[indexSelectLetter];
 
         if (!selectLetterGlobal && indexSelectLetter) {

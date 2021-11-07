@@ -25,12 +25,14 @@ export function isUpper(str, lang) {
     if (lang == 'ru') {
         if(/[ёа-я]/.test(str) || /[ЁА-Я]/.test(str)) return !/[ёа-я]/.test(str) && /[ЁА-Я]/.test(str);
         else if(/[!"№;%:?*()_+/,»«]/.test(str)) return true;
+        else if(/[ ]/.test(str)) return false;
         else return null;
     }
 
     if(lang == 'en') {
         if(/[a-z]/.test(str) || /[A-Z]/.test(str)) return !/[a-z]/.test(str) && /[A-Z]/.test(str);
         else if(/[~!@#$%^&*()_+{}|:"<>?]/.test(str)) return true;
+        else if(/[ ]/.test(str)) return false;
         else return null;
     }
 }
