@@ -1,4 +1,5 @@
-import { textForDisplay } from '../js/library.js';
+import { textForDisplayRu } from '../js/library.js';
+import { textForDisplayEn } from '../js/library.js';
 import { getRandomIndex } from '../js/helperFunctions.js';
 import { wrapLetterToSpan } from '../js/helperFunctions.js';
 import { cleanSelectLetter } from '../js/helperFunctions.js';
@@ -76,7 +77,7 @@ let isKeyPress;
 let lessonNum = 1;
 let lessonNumChange = 1;
 let lessonsEnd = false;
-let arrTextForDisplay;
+let arrtextForDisplay;
 let textareaChoseNeweText = document.getElementById('textareaChoseNeweText');
 
 let statistics = {
@@ -163,28 +164,39 @@ function loadCodeExercises() {
 
         if (exercisesMode == exercisesModeAll.forBeginers) {
 
-            arrTextForDisplay = mixTextForBeginers(lessonNum);
+            if (language == 'ru') arrtextForDisplay = mixTextForBeginers(textForDisplayRu, lessonNum);
+            if (language == 'en') arrtextForDisplay = mixTextForBeginers(textForDisplayEn, lessonNum);
 
             if (lessonsEnd) {
 
                 lessonsEnd = false;
                 lessonNum = 1;
 
-                if (language == 'ru') screenText.innerHTML = `Поздравляем! Вы успешно завершили интенсивный курс слепой печати.
-                                                          Теперь вам предстоит закрепить полученные знания на практике. Со временем у вас разовьется мышечная память и вы будете печатать вслепую даже не задумываясь об этом. Перейдите в раздел "Упражнения" и выберите один из вариантов. Начинайте тренировку на более реальных примерах. Желаем вам успехов!`;
+                if (language == 'ru') screenText.innerHTML = `Поздравляем! Вы успешно завершили интенсивный курс слепой печати. Теперь вам предстоит закрепить полученные знания на практике. Со временем у вас разовьется мышечная память и вы будете печатать вслепую даже не задумываясь об этом. Перейдите в раздел "Упражнения" и выберите один из вариантов. Начинайте тренировку на более реальных примерах. Желаем вам успехов!`;
+
+                if (language == 'en') screenText.innerHTML = `Congratulations! You have successfully completed the intensive blind typing course. Now it's up to you to consolidate your knowledge in practice. Over time you will develop muscle memory and you will type blindly without even thinking about it. Go to the "Exercises" section and choose one of the options. Start your practice with more real-world examples. We wish you success!`;
+
                 return;
 
             }
 
         }
 
-        if (exercisesMode == exercisesModeAll.number) arrTextForDisplay = mixTextNumSymb(textForDisplay.number);
-        if (exercisesMode == exercisesModeAll.symb) arrTextForDisplay = mixTextNumSymb(textForDisplay.symb);
-        if (exercisesMode == exercisesModeAll.myText) arrTextForDisplay = checkLengthText([textareaChoseNeweText.value], maxLengthDisplayText);
+        if (exercisesMode == exercisesModeAll.number) {
+            if (language == 'ru') arrtextForDisplay = mixTextNumSymb(textForDisplayRu.number);
+            if (language == 'en') arrtextForDisplay = mixTextNumSymb(textForDisplayEn.number);
+        }
+        if (exercisesMode == exercisesModeAll.symb) {
+            if (language == 'ru') arrtextForDisplay = mixTextNumSymb(textForDisplayRu.symb);
+            if (language == 'en') arrtextForDisplay = mixTextNumSymb(textForDisplayEn.symb);
+        }
+        if (exercisesMode == exercisesModeAll.myText) {
+            arrtextForDisplay = checkLengthText([textareaChoseNeweText.value], maxLengthDisplayText);
+        }
 
         startSwich = true;
 
-        chowTextForDisplay(mode);
+        chowtextForDisplayRu(mode);
         refreshScreen();
 
         let a = String(formatterDate.format(new Date(timeCount)));
@@ -206,45 +218,50 @@ function loadCodeExercises() {
     // // show Text For...
 
     // / main
-    function chowTextForDisplay(mode) {
+    function chowtextForDisplayRu(mode) {
 
-        if (mode == exercisesModeAll.forBeginers) chowTextForDisplayBeginers();
-        if (mode == exercisesModeAll.frase) chowTextForDisplayFrase(textForDisplay.frase);
-        if (mode == exercisesModeAll.number || mode == exercisesModeAll.symb) chowTextForDisplayNumSymb();
-        if (mode == exercisesModeAll.myText) chowTextForDisplayMyText();
+        if (mode == exercisesModeAll.forBeginers) chowtextForDisplayRuBeginers();
+        if (mode == exercisesModeAll.frase) chowtextForDisplayFrase();
+        if (mode == exercisesModeAll.number || mode == exercisesModeAll.symb) chowtextForDisplayRuNumSymb();
+        if (mode == exercisesModeAll.myText) chowtextForDisplayRuMyText();
 
     }
     // / 
 
-    function chowTextForDisplayBeginers() {
+    function chowtextForDisplayRuBeginers() {
 
-        arrTextForDisplay = checkLengthText(arrTextForDisplay, maxLengthDisplayText);
-        screenText.innerHTML = arrTextForDisplay[arrTextForDisplay.length - 1];
-        arrTextForDisplay.pop();
+        arrtextForDisplay = checkLengthText(arrtextForDisplay, maxLengthDisplayText);
+        screenText.innerHTML = arrtextForDisplay[arrtextForDisplay.length - 1];
+        arrtextForDisplay.pop();
 
     }
 
-    function chowTextForDisplayFrase(text) {
+    function chowtextForDisplayFrase() {
 
-        if(!arrTextForDisplay || arrTextForDisplay.length == 0) {
-            arrTextForDisplay = checkLengthText([text[getRandomIndex(0, text.length - 1)]], maxLengthDisplayText);
+        let text;
+
+        if (language == 'ru') text = textForDisplayRu.frase 
+        if (language == 'en') text = textForDisplayEn.frase 
+
+        if(!arrtextForDisplay || arrtextForDisplay.length == 0) {
+            arrtextForDisplay = checkLengthText([text[getRandomIndex(0, text.length - 1)]], maxLengthDisplayText);
         }
 
-        screenText.innerHTML = arrTextForDisplay[0];
-        arrTextForDisplay.shift();
+        screenText.innerHTML = arrtextForDisplay[0];
+        arrtextForDisplay.shift();
 
     }
 
-    function chowTextForDisplayNumSymb() {
+    function chowtextForDisplayRuNumSymb() {
 
-        screenText.innerHTML = arrTextForDisplay[0];
-        arrTextForDisplay.shift();
+        screenText.innerHTML = arrtextForDisplay[0];
+        arrtextForDisplay.shift();
 
     }
 
-    function chowTextForDisplayMyText() {
-        screenText.innerHTML = arrTextForDisplay[0];
-        arrTextForDisplay.shift();
+    function chowtextForDisplayRuMyText() {
+        screenText.innerHTML = arrtextForDisplay[0];
+        arrtextForDisplay.shift();
     }
 
     // //
@@ -262,7 +279,7 @@ function loadCodeExercises() {
 
         if (!selectLetterGlobal && indexSelectLetter) {
 
-            if (arrTextForDisplay.length == 0 && exercisesMode == exercisesModeAll.forBeginers) {
+            if (arrtextForDisplay.length == 0 && exercisesMode == exercisesModeAll.forBeginers) {
 
                 end();
 
@@ -275,7 +292,7 @@ function loadCodeExercises() {
             if (exercisesMode == exercisesModeAll.number ||
                 exercisesMode == exercisesModeAll.symb ||
                 exercisesMode == exercisesModeAll.myText) {
-                if (!arrTextForDisplay[0]) {
+                if (!arrtextForDisplay[0]) {
                     end();
                     return;
                 }
@@ -285,7 +302,7 @@ function loadCodeExercises() {
             statistics.positive.clear();
             statistics.negative.clear();
 
-            chowTextForDisplay(exercisesMode);
+            chowtextForDisplayRu(exercisesMode);
             text = cleanSelectLetter(screenText.innerHTML).split('');
             selectLetterGlobal = text[indexSelectLetter];
             text[indexSelectLetter] = wrapLetterToSpan(text[indexSelectLetter], 3);
@@ -498,7 +515,8 @@ function loadCodeExercises() {
             if (hideWindowSetTimer.style.display == 'block') return;
 
             if (textareaChoseNeweText.value == '') {
-                textareaChoseNeweText.value = 'Вставьте сюда свой текст!';
+                if (language == 'ru') textareaChoseNeweText.value = 'Вставьте сюда свой текст!';
+                if (language == 'en') textareaChoseNeweText.value = 'Insert your text here!';
                 return;
             }
 
@@ -506,7 +524,7 @@ function loadCodeExercises() {
                 hideWindowChoseNeweText.style.display = 'block';
             } else {
                 hideWindowChoseNeweText.style.display = 'none';
-                arrTextForDisplay = checkLengthText([textareaChoseNeweText.value], maxLengthDisplayText);
+                arrtextForDisplay = checkLengthText([textareaChoseNeweText.value], maxLengthDisplayText);
             }
 
         };
@@ -516,7 +534,8 @@ function loadCodeExercises() {
             textareaChoseNeweText = document.getElementById('textareaChoseNeweText');
 
             if (textareaChoseNeweText.value == '') {
-                textareaChoseNeweText.value = 'Вставьте сюда свой текст!';
+                if (language == 'ru') textareaChoseNeweText.value = 'Вставьте сюда свой текст!';
+                if (language == 'en') textareaChoseNeweText.value = 'Insert your text here!';
                 return;
             }
 
@@ -750,7 +769,20 @@ function loadCodeExercises() {
 
         }
 
-        if (lang == 'en') { };
+        if (lang == 'en') {
+
+            result = `<p class="statisticsEnd">Your typing speed (characters per minute) — <span>${timeSmbMin}</span></p>
+                  <p class="statisticsEnd">Accuracy — <span>${accuracy}<span></p>
+                  <p class="statisticsEnd">Characters typed — <span>${statistics.allSumbols}</span></p>
+                  <p class="statisticsEnd">Time spent — <span>${statistics.time}</span></p>`;
+
+            if (exercisesMode == exercisesModeAll.forBeginers) {
+                title = `<p class="statisticsEnd"><span>Lesson statistics #${lessonNum}<span></p>`;
+            } else title = `<p class="statisticsEnd"><span>Statistics:<span></p>`;
+
+            screenText.innerHTML = title + result;
+
+        };
 
     }
 
@@ -769,7 +801,7 @@ function loadCodeExercises() {
         lastKey = undefined;
         pauseSwich = false;
         isSetHideTimer = null;
-        arrTextForDisplay = null;
+        arrtextForDisplay = null;
 
         statistics = {
             positive: new Set(),
@@ -788,7 +820,7 @@ function loadCodeExercises() {
 
     // / // mix text
 
-    function mixTextForBeginers(lesson) {
+    function mixTextForBeginers(lib, lesson) {
 
         let mainResult = [];
         let result = [];
@@ -799,11 +831,11 @@ function loadCodeExercises() {
 
         for (let i = lesson; i > 0; i--) {
 
-            settings.push(textForDisplay.forBeginers[i - 1].length);
+            settings.push(lib.forBeginers[i - 1].length);
 
-            for (let x = textForDisplay.forBeginers[i - 1].length - 1; x >= 0; x--) {
+            for (let x = lib.forBeginers[i - 1].length - 1; x >= 0; x--) {
 
-                let arr = textForDisplay.forBeginers[i - 1][x];
+                let arr = lib.forBeginers[i - 1][x];
 
                 for (let n = 0; n < (intensTraining * 2); n++) {
                     index = getRandomIndex(0, arr.length + 1);

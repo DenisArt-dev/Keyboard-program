@@ -81,7 +81,7 @@ export const keyboardIdCode = [
     ['arrRight', 'ArrowRight', 'R'],
 ];
 
-export const textForDisplay = {
+export const textForDisplayRu = {
 
     forBeginers: [
 
@@ -89,10 +89,11 @@ export const textForDisplay = {
             ['а', 'о'],
             ['в', 'л'],
             ['ы', 'д'],
+            ['ф', 'ж'],
         ],
 
         [
-            ['ф', 'ж'],
+            ['п', 'р'],
             ['к', 'г'],
             ['е', 'н'],
         ],
@@ -105,21 +106,24 @@ export const textForDisplay = {
 
         [
             ['ё', 'х'],
-            ['я', 'ъ'],
+            ['!', 'ъ'],
+            ['"', 'э'],
         ],
 
         [
-            ['ч', '.'],
-            ['с', 'ю'],
+            ['я', '.'],
+            ['ч', 'ю'],
+            ['с', 'б'],
         ],
 
         [
-            ['м', 'т'],
-            [',', 'ь'],
+            ['м', 'ь'],
+            ['и', 'т'],
         ],
 
         [
-            ['?', 'б'],
+            [',', ';'],
+            ['?', ':'],
         ],
 
     ],
@@ -211,3 +215,70 @@ export const textForDisplay = {
     ],
     myText: undefined,
 }
+
+
+
+
+export const textForDisplayEn = {
+
+    forBeginers: [
+
+        [
+            ['f', 'j'],
+            ['d', 'k'],
+            ['s', 'l'],
+        ],
+
+        [
+            ['a', ';'],
+            ['g', 'h'],
+            ['r', 'u'],
+        ],
+
+        [
+            ['t', 'y'],
+            ['e', 'i'],
+            ['w', 'o'],
+        ],
+
+        [
+            ['q', 'p'],
+            ['!', '('],
+            ['#', ')'],
+        ],
+
+        [
+            ['z', '?'],
+            ['x', '.'],
+        ],
+
+        [
+            ['c', ','],
+            ['v', 'm'],
+        ],
+
+        [
+            ['b', 'n'],
+        ],
+
+    ],
+    frase: [
+        `The United States (U.S. or US), officially the United States of America (U.S.A. or USA) and commonly known as America, is a country primarily located in North America. It consists of 50 states, a federal district, five major unincorporated territories, 326 Indian reservations, and some minor possessions. At 3.8 million square miles (9.8 million square kilometers), it is the world's third- or fourth-largest country by total area. The United States shares significant land borders with Canada to the north and Mexico to the south as well as limited maritime borders with the Bahamas, Cuba, and Russia. With a population of more than 331 million people, it is the third most populous country in the world. The national capital is Washington, D.C., and the most populous city is New York City.`
+    ],
+    number: [
+
+        ['4', '7'],
+        ['5', '6'],
+        ['3', '8'],
+        ['2', '9'],
+        ['1', '0'],
+
+    ],
+    symb: [
+        ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '{', '}', '|', ':', '"', '<', '>', '?',
+         '`', '-', '=', '[', ']', '\\', ';', '\'', ',', '.', '/']
+    ],
+    myText: undefined,
+}
+
+
