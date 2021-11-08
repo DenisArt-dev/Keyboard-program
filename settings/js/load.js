@@ -33,6 +33,8 @@ function takeKeyboard() {
         keyboard.keys.set(item[1], {backKey: arrKeys[(arrKeys.length - 1)  - i], key: item});
     } );
 
+    if (language == 'ru') keyboard.cyrilic.style.display = 'block';
+
     return keyboard;
 
 }

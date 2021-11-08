@@ -11,8 +11,6 @@ import { colors } from '../js/main.js';
 import { checkLengthText } from '../js/helperFunctions.js';
 
 
-const language = 'ru';
-
 // font size chenge
 const fontSizeInner = document.getElementById('fontSizeInner');
 const fontSizePlus = document.getElementById('fontSizePlus');

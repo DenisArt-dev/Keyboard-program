@@ -307,6 +307,10 @@ a {
     display: none;
 }
 
+.keyboardCyrillic {
+    display: none;
+}
+
 .cls-1 {
     fill: #111315;
 }
