@@ -63,3 +63,89 @@ function loadCodeHomePage() {
     }
 
 }
+
+
+
+
+// media
+
+const burgerMenuIcon = document.querySelector('.burgerMenu__icon');
+
+burgerMenuIcon.onclick = () => {
+
+    const headerMenu = document.querySelector('.header__menu');
+
+    if (headerMenu.style.display == 'block') {
+        
+        const headerMenuUl = document.querySelector('.header__menu-ul');
+        const burgerMenu = document.querySelector('.burgerMenu');
+    
+        burgerMenu.firstElementChild.style.color = null;
+        burgerMenu.style.marginBottom = null;
+        headerMenuUl.style.display = null;
+        headerMenu.style.textAlign = null;
+        headerMenu.style.display = null;
+        burgerMenu.style.backgroundColor = null;
+
+        for (let i = 0; i < burgerMenuIcon.children.length; i++) {
+            burgerMenuIcon.children[i].style.borderColor = null;
+        }    
+
+        return;
+
+    }
+
+    const headerMenuUl = document.querySelector('.header__menu-ul');
+    const burgerMenu = document.querySelector('.burgerMenu');
+
+    burgerMenu.firstElementChild.style.color = '#000';
+    burgerMenu.style.marginBottom = '0px';
+    burgerMenu.style.backgroundColor = '#fff';
+    headerMenuUl.style.display = 'block';
+    headerMenu.style.textAlign = 'center';
+    headerMenu.style.display = 'block';
+
+    for (let i = 0; i < burgerMenuIcon.children.length; i++) {
+        burgerMenuIcon.children[i].style.borderColor = '#000';
+    }
+
+};
+
+
+window.addEventListener('resize', resizeLis);
+
+function resizeLis() {
+
+    const burgerMenu = document.querySelector('.burgerMenu');
+    const headerMenu = document.querySelector('.header__menu');
+    const headerMenuUl = document.querySelector('.header__menu-ul');
+
+    if (getComputedStyle(burgerMenu).display != 'flex' && headerMenuUl.style.display == 'block') {
+        
+        const burgerMenu = document.querySelector('.burgerMenu');
+    
+        burgerMenu.firstElementChild.style.color = null;
+        burgerMenu.style.marginBottom = null;
+        headerMenuUl.style.display = null;
+        headerMenu.style.textAlign = null;
+        headerMenu.style.display = null;
+        burgerMenu.style.backgroundColor = null;
+
+        for (let i = 0; i < burgerMenuIcon.children.length; i++) {
+            burgerMenuIcon.children[i].style.borderColor = null;
+        } 
+
+    }
+
+}
+
+
+
+// Сообщение для пользователей мобильных устройств
+
+// if (window.innerWidth < 700) {
+//     alert(`Добро пожаловать на интенсивный курс слепой печати! 
+//             Если вы используете мобильное устройство, то,
+//             подключив к нему клавиатуру, вы сможете получить
+//             доступ ко всему функционалу приложения.`);
+// }

@@ -90,6 +90,7 @@ a {
 .main__keyboard {
     margin: auto;
     max-width: 700px;
+    padding: 0 10px;
 }
 
 
@@ -196,6 +197,34 @@ a {
 }
 
 
+
+
+.burgerMenu {
+    padding: 5px;
+    display: none;
+    /* text-align: right; */
+    justify-content: space-between;
+}
+
+.burgerMenu__title {
+    font-weight: 500;
+    margin: auto;
+}
+
+.burgerMenu__icon {
+    /* margin-left: 95%; */
+    padding: 3px 6px;
+}
+
+.burgerMenu__icon:hover {
+    cursor: pointer;
+}
+
+.burgerMenu__arr {
+    border: 1px solid #ffffff;
+    margin: 5px auto;
+    width: 20px;
+}
 
 
 

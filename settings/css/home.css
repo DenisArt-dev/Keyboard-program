@@ -5,8 +5,9 @@
 }
 
 .main__description {
-    margin-left: 150px;
-    margin-right: 150px;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+    padding: 0 30px;
 }
 
 .main__button button {
@@ -32,4 +33,9 @@
     cursor: pointer;
     background-color: #111315;
     color: #ffffff;
+}
+
+.bottomImg {
+    width: 100%;
+    display: none;
 }
