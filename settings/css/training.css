@@ -4,8 +4,7 @@
 }
 
 .main__description {
-    width: 600px;
-    margin: 20px auto;
+    padding: 0 140px;
 }
 
 .main__content {
@@ -18,9 +17,8 @@
 }
 
 .main__button-button {
-    padding: 5px 30px;
+    padding: 7px 40px;
     margin-bottom: 20px;
-    margin-top: -25px;
 }
 
 .main__rules {
@@ -35,8 +33,7 @@ span {
 
 .secondScreen {
     display: none;
-    width: 700px;
-    margin: 0 auto 20px;
+    margin: 0 30px 20px;
     background-color: #fff;
     padding: 5px 15px;
 }

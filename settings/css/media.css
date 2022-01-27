@@ -52,6 +52,20 @@
         margin-bottom: 15px;
     }
 
+    /* training css */
+
+    .main__description {
+        padding: 0 10px;
+    }
+
+    .main__content {
+        display: block;
+    }
+
+    .main__rules {
+        margin: 20px auto;
+    }
+
 }
 
 
@@ -78,4 +92,12 @@
         display: block;
     }
 
+}
+
+/* training css */
+
+@media (max-width: 360px) {
+    .main__rules {
+        width: auto;
+    }
 }
