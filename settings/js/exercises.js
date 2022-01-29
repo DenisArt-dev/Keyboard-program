@@ -14,12 +14,13 @@ import { checkLengthText } from '../js/helperFunctions.js';
 
 // font size chenge
 const fontSizeInner = document.getElementById('fontSizeInner');
+const fInner = document.querySelector('#buttonsSVGf span');
 const fontSizePlus = document.getElementById('fontSizePlus');
 const fontSizeMinus = document.getElementById('fontSizeMinus');
 
 const countSymbolsHTML = document.getElementById('countSymbolsHTML');
 
-const screenDisplay = document.getElementsByClassName('screen__display');
+const screenDisplay = document.querySelector('.screen__display');
 const screenText = document.getElementById('screenText');
 
 const buttonStart = document.getElementById('buttonStart');
@@ -50,6 +51,23 @@ const buttonChoseNeweText = document.getElementById('buttonChoseNeweText');
 const hideWindowChoseNeweText = document.getElementById('hideWindowChoseNeweText');
 const choseNeweTextOk = document.getElementById('choseNeweTextOk');
 // const textareaChoseNeweText = document.getElementById('textareaChoseNeweText');
+
+// hideWindowScreenSize
+const hideWindowScreenSize = document.getElementById('hideWindowScreenSize');
+const changeScreenSizeBtn = document.getElementById('changeScreenSizeBtn');
+const hideWindowScreenSizeBtCen = document.getElementById('hideWindowScreenSizeBtCen');
+const hideWindowScreenSizeBtOk = document.getElementById('hideWindowScreenSizeBtOk');
+const screenSizeSliderWidth = {
+    slider: document.querySelectorAll('.hideWindowScreenSize__slider')[0],
+    runner: document.querySelectorAll('.hideWindowScreenSize__sliderRunner')[0],
+    descr: document.querySelectorAll('.hideWindowScreenSize__sliderDescr')[0],
+};
+const screenSizeSliderHeight = {
+    slider: document.querySelectorAll('.hideWindowScreenSize__slider')[1],
+    runner: document.querySelectorAll('.hideWindowScreenSize__sliderRunner')[1],
+    descr: document.querySelectorAll('.hideWindowScreenSize__sliderDescr')[1],
+};
+
 
 const timerScreen = document.getElementById('timerScreen');
 
@@ -142,6 +160,7 @@ function loadCodeExercises() {
 
         screenText.style.fontSize = `${x}px`;
         fontSizeInner.innerHTML = x;
+        fInner.innerHTML = x; 
 
     }
 
@@ -240,10 +259,10 @@ function loadCodeExercises() {
 
         let text;
 
-        if (language == 'ru') text = textForDisplayRu.frase 
-        if (language == 'en') text = textForDisplayEn.frase 
+        if (language == 'ru') text = textForDisplayRu.frase
+        if (language == 'en') text = textForDisplayEn.frase
 
-        if(!arrtextForDisplay || arrtextForDisplay.length == 0) {
+        if (!arrtextForDisplay || arrtextForDisplay.length == 0) {
             arrtextForDisplay = checkLengthText([text[getRandomIndex(0, text.length - 1)]], maxLengthDisplayText);
         }
 
@@ -271,9 +290,9 @@ function loadCodeExercises() {
 
         let text = cleanSelectLetter(screenText.innerHTML).split('');
 
-        text.forEach( (item, i) => {
+        text.forEach((item, i) => {
             if (isUpper(item, language) == null) text[i] = '*';
-        } );
+        });
 
         selectLetterGlobal = text[indexSelectLetter];
 
@@ -366,7 +385,12 @@ function loadCodeExercises() {
 
     function loadCodeFrase() {
 
-        buttonSetTimer.onclick = () => {
+        const buttonsSVGt = document.getElementById('buttonsSVGt'); // media
+
+        buttonsSVGt.onclick = btSetTimerLis; // media
+        buttonSetTimer.onclick = btSetTimerLis;
+        
+        function btSetTimerLis() {
 
             if (!startSwich) {
 
@@ -439,31 +463,33 @@ function loadCodeExercises() {
 
     if (exercisesMode == exercisesModeAll.forBeginers) loadCodeForBeginers();
 
-    function loadCodeForBeginers() {
+    function buttonChooseLessonListener() {
 
-        buttonChooseLesson.onclick = () => {
+        if (hideWindowChooseLesson.style.display == 'block') {
 
-            if (hideWindowChooseLesson.style.display == 'block') {
+            hideWindowChooseLesson.style.display = 'none';
 
-                hideWindowChooseLesson.style.display = 'none';
+        } else {
 
-            } else {
+            if (startSwich) return;
 
-                if (startSwich) return;
+            for (let y = 0; y < 7; y++) {
 
-                for (let y = 0; y < 7; y++) {
-
-                    buttonsLessons[y].style.border = '1px solid rgba(255,255,255,.05)';
-
-                }
-
-                lessonNumChange = lessonNum;
-                buttonsLessons[lessonNum - 1].style.border = 'solid 1px #a2a2a2';
-                hideWindowChooseLesson.style.display = 'block';
+                buttonsLessons[y].style.border = '1px solid rgba(255,255,255,.05)';
 
             }
 
-        };
+            lessonNumChange = lessonNum;
+            buttonsLessons[lessonNum - 1].style.border = 'solid 1px #a2a2a2';
+            hideWindowChooseLesson.style.display = 'block';
+
+        }
+
+    }
+
+    function loadCodeForBeginers() {
+
+        buttonChooseLesson.onclick = buttonChooseLessonListener;
 
         for (let i = 0; i < 7; i++) {
 
@@ -507,7 +533,12 @@ function loadCodeExercises() {
 
     function loadCodeMyText() {
 
-        buttonChoseNeweText.onclick = () => {
+        const buttonsSVGst = document.getElementById('buttonsSVGst'); // media
+        buttonsSVGst.onclick = choseNeweTextLis; // media
+
+        buttonChoseNeweText.onclick = choseNeweTextLis;
+
+        function choseNeweTextLis() {
 
             if (startSwich) return;
 
@@ -527,7 +558,7 @@ function loadCodeExercises() {
                 arrtextForDisplay = checkLengthText([textareaChoseNeweText.value], maxLengthDisplayText);
             }
 
-        };
+        }
 
         choseNeweTextOk.onclick = () => {
 
@@ -600,7 +631,7 @@ function loadCodeExercises() {
                 nextStep();
             } else if (keyPress.key[3]) {
                 setColorToKeys(keyPress, colors.keyboardKeysNegative);
-                screenDisplay[0].style.backgroundColor = colors.keyboardKeysNegative;
+                screenDisplay.style.backgroundColor = colors.keyboardKeysNegative;
                 if (!statistics.positive.has(indexSelectLetter)) {
                     statistics.negative.add(indexSelectLetter);
                 }
@@ -653,7 +684,7 @@ function loadCodeExercises() {
 
         }
 
-        screenDisplay[0].style.backgroundColor = colors.mainColor3;
+        screenDisplay.style.backgroundColor = colors.mainColor3;
 
     }
 
@@ -735,9 +766,9 @@ function loadCodeExercises() {
 
         statistics.time = formatterDate.format(new Date(timeCount));
 
-        let timeSmbMin = (new Date(timeCount).getHours() * 60 * 60) + 
-                         (new Date(timeCount).getMinutes() * 60) + 
-                         (new Date(timeCount).getSeconds());
+        let timeSmbMin = (new Date(timeCount).getHours() * 60 * 60) +
+            (new Date(timeCount).getMinutes() * 60) +
+            (new Date(timeCount).getSeconds());
 
         let result;
         let title;
@@ -911,6 +942,197 @@ function loadCodeExercises() {
     }
 
     // / // 
+
+
+
+    /// /// / hideWindowScreenSize
+
+    let sizeDefault = {};
+
+    changeScreenSizeBtn.onclick = () => {
+        if (hideWindowScreenSize.style.display == 'block') {
+            hideWindowScreenSize.style.display = null;
+        } else {
+            hideWindowScreenSize.style.display = 'block';
+            changeScreenSize();
+        }
+    };
+
+    hideWindowScreenSizeBtCen.onclick = () => {
+        hideWindowScreenSize.style.display = null;
+        changeSSmain(sizeDefault.width, 'width');
+        changeSSmain(sizeDefault.height, 'height');
+    };
+
+    hideWindowScreenSizeBtOk.onclick = () => {
+        hideWindowScreenSize.style.display = null;
+    };
+
+
+    function changeScreenSize() {
+
+
+        screenSizeSliderWidth.ondragstart = () => { return false };
+        screenSizeSliderHeight.ondragstart = () => { return false };
+
+        screenSizeSliderWidth.runner.addEventListener('pointerdown', listenerDownRunner);
+        screenSizeSliderHeight.runner.addEventListener('pointerdown', listenerDownRunner);
+
+        screenSizeSliderWidth.descr.innerHTML = screenDisplay.offsetWidth + 'px';
+        screenSizeSliderHeight.descr.innerHTML = screenDisplay.offsetHeight + 'px';
+
+
+        let sssHeightWidthDsc;
+        let befAft = document.querySelectorAll('.hideWindowScreenSize__bef-aft');
+
+        setMaxMinSize(befAft);
+
+        let size = {
+            width: {
+                min: parseInt(befAft[0].innerHTML),
+                max: parseInt(befAft[1].innerHTML),
+                now: parseInt(screenSizeSliderWidth.descr.innerHTML),
+            },
+            height: {
+                min: parseInt(befAft[2].innerHTML),
+                max: parseInt(befAft[3].innerHTML),
+                now: parseInt(screenSizeSliderHeight.descr.innerHTML),
+            },
+        };
+
+        sizeDefault.width = size.width.now;
+        sizeDefault.height = size.height.now;
+
+        screenSizeSliderHeight.runner.style.left =
+            ((size.height.now / (size.height.max / screenSizeSliderHeight.runner.parentNode.offsetWidth)) -
+                screenSizeSliderHeight.runner.offsetWidth).toFixed() + 'px';
+
+
+        screenSizeSliderWidth.runner.style.left =
+            ((size.width.now / (size.width.max / screenSizeSliderWidth.runner.parentNode.offsetWidth)) -
+                screenSizeSliderWidth.runner.offsetWidth).toFixed() + 'px';
+
+
+        function listenerDownRunner(evDR) {
+
+            evDR.preventDefault();
+
+            if (evDR.target == screenSizeSliderWidth.runner) {
+                sssHeightWidthDsc = screenSizeSliderWidth.descr;
+                size.max = size.width.max;
+                size.min = size.width.min;
+                size.now = size.width.now;
+            }
+            else {
+                sssHeightWidthDsc = screenSizeSliderHeight.descr;
+                size.max = size.height.max;
+                size.min = size.height.min;
+                size.now = size.height.now;
+            }
+
+            window.onpointermove = listenerMoveRunner;
+            window.onpointerup = listenerUpRunner;
+
+            let bias = evDR.clientX;
+            if (evDR.target.style.left) bias -= parseInt(evDR.target.style.left);
+
+            function listenerMoveRunner(evMR) {
+
+                if (evMR.clientX - bias < 0) {
+                    evDR.target.style.left = null;
+                    sssHeightWidthDsc.innerHTML = size.min + 'px';
+                } else if (evMR.clientX - bias + evDR.target.offsetWidth > evDR.target.parentNode.offsetWidth) {
+                    evDR.target.style.left = evDR.target.parentNode.offsetWidth - evDR.target.offsetWidth + 'px';
+                    sssHeightWidthDsc.innerHTML = size.max + 'px';
+                } else {
+                    evDR.target.style.left = evMR.clientX - bias + 'px';
+
+                    size.now = (size.min + ((evMR.clientX - bias) *
+                        ((size.max - size.min) / (evDR.target.parentNode.offsetWidth - evDR.target.offsetWidth)))).toFixed();
+
+                    sssHeightWidthDsc.innerHTML = size.now + 'px';
+
+                    changeSSmain(size.now + 'px', evDR.target.dataset.mode);
+                }
+
+            }
+
+            function listenerUpRunner() {
+                window.onpointermove = null;
+            }
+
+        }
+
+    }
+
+
+    function changeSSmain(size, mode) {
+        if (!isNaN(size)) size = size + 'px';
+        screenDisplay.style[mode] = size;
+    }
+
+    function setMaxMinSize(befAft) {
+
+        let styleCont = getComputedStyle(document.querySelector('.container'));
+
+        let a = parseInt(styleCont.maxWidth), b = parseInt(styleCont.paddingRight);
+
+        if (window.innerWidth - (parseInt(styleCont.paddingRight) * 2) < a - (b * 2)) {
+            befAft[1].innerHTML = window.innerWidth - (parseInt(styleCont.paddingRight) * 2) + 'px';
+        } else befAft[1].innerHTML = a - (b * 2) + 'px';
+
+    }
+
+
+    /// /// /
+
+
+
+
+        // ///// / media
+
+        if (window.innerWidth < 550) chengeFontSize(12);
+
+
+        if (window.innerWidth < 500) {
+
+            const btnPause = document.getElementById('buttonsSVGp');
+            const btnStart = document.getElementById('buttonsSVGs');
+            
+            const btnChFSizePl = document.querySelectorAll('#buttonsSVGf button')[0];
+            const btnChFSizeMi = document.querySelectorAll('#buttonsSVGf button')[1];
+            const btnChScr = document.getElementById('buttonsSVGss');
+
+            btnPause.onclick = () => {
+                doPause();
+            }
+
+            btnStart.onclick = () => {
+                start(exercisesMode);
+            }
+
+            if (exercisesMode == exercisesModeAll.forBeginers) {
+                const btnLessons = document.getElementById('buttonsSVGl');
+                btnLessons.onclick = buttonChooseLessonListener;
+            }
+
+            btnChFSizePl.onclick = () => chengeFontSize(+fInner.innerHTML + 1);
+            btnChFSizeMi.onclick = () => chengeFontSize(+fInner.innerHTML - 1);
+
+            btnChScr.onclick = () => {
+                if (hideWindowScreenSize.style.display == 'block') {
+                    hideWindowScreenSize.style.display = null;
+                } else {
+                    hideWindowScreenSize.style.display = 'block';
+                    changeScreenSize();
+                }
+            };
+
+        }
+
+
+        // ///// /
+
 
 }
 

@@ -19,8 +19,24 @@
     .main__button button {
         padding: 7px 40px;
     }
+
+    /* exercises */
+
+    .screen__display {
+        padding: 7px
+    }
+
 }
 
+@media (max-width: 750px) {
+
+    /* exercises */
+
+    .screen__menu {
+        font-size: 12px;
+    }
+
+}
 
 @media (max-width: 700px) {
 
@@ -66,13 +82,47 @@
         margin: 20px auto;
     }
 
+    /* exercises */
+
+    .screen__display{
+        height: 45px;
+    }
+
 }
 
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
 
     .main__description {
         padding: 0 10px;
+    }
+
+    /* exercises */
+
+    .screen {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    /* exercises */
+
+    .buttonsSVG {
+        display: block;
+    }
+
+    .screen__menu-items {
+        display: none;
+    }
+
+    .screen__fontSize {
+        display: none;
+    }
+
+    .screen__display {
+        padding: 5px
     }
 
 }
@@ -92,12 +142,50 @@
         display: block;
     }
 
+    /* exercises */
+
+    #hideWindowSetTimer .hideWindowButtons {
+        width: 70px;
+    }
+
+    #hideWindowScreenSize {
+        padding: 20px 0 5px;
+    }
+
+    .hideWindowScreenSize__sliderItem {
+        margin: 10px;
+    }
+
+    .hideWindowScreenSize__slider {
+        width: 130px;
+    }
+
 }
 
 /* training css */
 
 @media (max-width: 360px) {
+
     .main__rules {
         width: auto;
     }
+
+    /* exercises */
+
+    .countSymbols {
+        font-size: 9px;
+    }
+
+    #hideWindowChooseLesson {
+        padding: 20px 10px 5px 10px;
+    }
+
+    .buttonsLessons {
+        margin: auto 3px;
+    }
+
+    .hideWindowChooseLesson__buttons button {
+        width: 105px;
+    }
+
 }
