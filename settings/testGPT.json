@@ -1,0 +1,20 @@
+{
+    "cards": [
+        {
+            "type": "computers",
+            "model": "Dell",
+            "id": 235
+        }, 
+        {
+            "type": "computers",
+            "model": "HP",
+            "id": 535
+        },
+        {
+            "type": "computers",
+            "model": "Apple",
+            "id": 575
+        }
+    ],
+    "date": "08.04.2023"
+}
